@@ -1,0 +1,7 @@
+automacao\pages\RegistrarPage.class
+automacao\pages\LoginPage.class
+automacao\pages\ExtratoPage.class
+automacao\pages\HomePage.class
+automacao\utils\DriverFactory.class
+automacao\pages\TransferenciaPage.class
+automacao\utils\PageUtils.class
