@@ -49,33 +49,45 @@ public class CadastroSteps {
 
   @Entao("as mensagens de email senha e confirmar senha devem ser apresentadas {string}, {string}, {string}")
   public void asMensagensDeEmailSenhaEConfirmarSenhaDevemSerApresentadas(String msg1, String msg2, String msg3) {
-    Assert.assertEquals(msg1, registrarPage.obterTextoEmailFieldSpan());
-    Assert.assertEquals(msg2, registrarPage.obterTextoSenhaFieldSpan());
-    Assert.assertEquals(msg3, registrarPage.obterTextoConfirmarSenhaFieldSpan());
+    String spanEmailActual = registrarPage.obterTextoEmailFieldSpan();
+    String spanSenhaActual = registrarPage.obterTextoSenhaFieldSpan();
+    String spanConfirmarSenhaActual = registrarPage.obterTextoConfirmarSenhaFieldSpan();
+
+    Assert.assertEquals(msg1, spanEmailActual);
+    Assert.assertEquals(msg2, spanSenhaActual);
+    Assert.assertEquals(msg3, spanConfirmarSenhaActual);
   }
 
   @Quando("inserir um e-mail incompleto no cadastro")
   public void inserirUmEmailIncompletoNoCadastro() {
-    registrarPage.inserirEmail("email_incompleto");
+    String emailIncompleto = "exemplo@";
+
+    registrarPage.inserirEmail(emailIncompleto);
   }
 
   @Quando("clique em criar conta com saldo")
-  public void cliqueEmCriarContaComSaldo() throws InterruptedException {
+  public void cliqueEmCriarContaComSaldo() {
     registrarPage.clickContaComSaldo();
   }
 
   @Entao("a mensagem em cadastro de email invalido deve ser apresentada {string}")
   public void aMensagemEmCadastroDeEmailInvalidoDeveSerApresentada(String msg1) {
-    Assert.assertEquals(msg1, registrarPage.obterTextoEmailFieldSpan());
+    String spanEmailActual = registrarPage.obterTextoEmailFieldSpan();
+
+    Assert.assertEquals(msg1, spanEmailActual);
   }
 
   @Entao("a mensagem deve ser apresentada em confirmar senha {string}")
   public void aMensagemDeveSerApresentadaEmConfirmarSenha(String msg1) {
-    Assert.assertEquals(msg1, registrarPage.obterTextoConfirmarSenhaFieldSpan());
+    String spanConfirmarSenhaActual = registrarPage.obterTextoConfirmarSenhaFieldSpan();
+
+    Assert.assertEquals(msg1, spanConfirmarSenhaActual);
   }
 
   @Entao("a mensagem de alerta de cadastro deve ser apresentada {string}")
   public void aMensagemDeAlertaDeCadastroDeveSerApresentada(String msg1) {
-    Assert.assertNotNull(registrarPage.obterTextoAlerta());
+    String alertaActual = registrarPage.obterTextoAlerta();
+
+    Assert.assertEquals(msg1, alertaActual);
   }
 }

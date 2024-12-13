@@ -17,35 +17,35 @@ public class HomePage {
   private WebDriver driver;
   private WebDriverWait wait;
   private PageUtils pageUtils;
-  // private StepsUtils stepsUtils;
+  //private StepsUtils stepsUtils;
 
   public HomePage(WebDriver driver) {
     this.driver = driver;
     this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     this.pageUtils = new PageUtils(driver);
-    // this.stepsUtils = new StepsUtils();
+    //this.stepsUtils = new StepsUtils();
     PageFactory.initElements(driver, this);
   }
 
-  @FindBy(xpath = "//*[@id=\"textName\"]")
+  @FindBy(xpath = "//*[@id='textName']")
   private WebElement textName;
 
-  @FindBy(xpath = "//*[@id=\"__next\"]/div/div[2]/div/div[1]/h1")
+  @FindBy(xpath = "//*[@id='__next']/div/div[2]/div/div[1]/h1")
   private WebElement textNameInicial;
 
-  @FindBy(xpath = "//*[@id=\"textAccountNumber\"]/span")
+  @FindBy(xpath = "//*[@id='textAccountNumber']/span")
   private WebElement textAccountNumber;
 
-  @FindBy(xpath = "//*[@id=\"textBalance\"]/span")
+  @FindBy(xpath = "//*[@id='textBalance']/span")
   private WebElement textBalance;
 
-  @FindBy(xpath = "//*[@id=\"btn-TRANSFERÊNCIA\"]")
+  @FindBy(xpath = "//*[@id='btn-TRANSFERÊNCIA']")
   private WebElement transferenciaButton;
 
-  @FindBy(xpath = "//*[@id=\"btn-EXTRATO\"]")
+  @FindBy(xpath = "//*[@id='btn-EXTRATO']")
   private WebElement extratoButton;
 
-  @FindBy(xpath = "//*[@id=\"btnExit\"]")
+  @FindBy(xpath = "//*[@id='btnExit']")
   private WebElement exitButton;
 
   public String obterTextName() {
@@ -54,7 +54,7 @@ public class HomePage {
   }
 
   public String obterTextNameInicial() {
-    String nome = pageUtils.obterTexto(textNameInicial);
+    String nome = pageUtils.obterTexto(textName);
     return StepsUtils.extraiInicial(nome);
   }
 

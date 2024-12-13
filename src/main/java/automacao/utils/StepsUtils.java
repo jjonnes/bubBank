@@ -35,4 +35,8 @@ public class StepsUtils {
 
     return input.substring(index + 2).trim();
   }
+
+  public static String extraiAcconutNumber(String input) {
+    return input.replaceAll(".*?(\\d+-\\d).*", "$1");
+  }
 }

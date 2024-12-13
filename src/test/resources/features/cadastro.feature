@@ -60,8 +60,7 @@ Funcionalidade: Testar cadastro
 		E marcar a opção conta com saldo
 		E clicar em cadastrar
 		Então a mensagem de alerta de cadastro deve ser apresentada "<msg1>"
-		E verificar que a conta possui saldo "<email>""<senha"
-		
+
 		Exemplos:
-		|msg1                          |email        |senha|nome|
+		|msg1                          |email            |senha|nome|
 		|A conta foi criada com sucesso|exemplo@email.com|123  |nome|

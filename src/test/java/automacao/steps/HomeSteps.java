@@ -26,42 +26,57 @@ public class HomeSteps {
 
   @Quando("realizar o login sem saldo")
   public void realizar_o_login_sem_saldo() {
-    loginPage.inserirEmail(massaDeDados.get(0).getEmail());
-    loginPage.inserirSenha(massaDeDados.get(0).getSenha());
+    Usuario usuario = massaDeDados.get(0);
+
+    loginPage.inserirEmail(usuario.getEmail());
+    loginPage.inserirSenha(usuario.getSenha());
     loginPage.clickAcessar();
   }
 
   @Entao("o nome e a inicial deve ser o mesmo de cadastro")
   public void o_nome_e_a_inicial_deve_ser_o_mesmo_de_cadastro() {
-    Assert.assertEquals(massaDeDados.get(0).getNome(), homePage.obterTextNameInicial());
-    Assert.assertEquals(massaDeDados.get(0).getNome(), homePage.obterTextName());
+    Usuario usuario = massaDeDados.get(0);
+
+    String nomeAtual = homePage.obterTextName();
+    String inicialAtual = homePage.obterTextNameInicial();
+    String nomeExpected = usuario.getNome();
+    String InicialExpected = String.valueOf(usuario.getNome().charAt(0)).toUpperCase();
+
+    Assert.assertEquals(nomeAtual, nomeExpected);
+    Assert.assertEquals(inicialAtual, InicialExpected);
   }
 
   @Entao("o numero da conta deve ser referente ao login realizado")
   public void o_numero_da_conta_deve_ser_referente_ao_login_realizado() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-    // Assert.assertEquals("L", homePage.obterTextAccountNumber());
+    Usuario usuario = massaDeDados.get(0);
+
+    String contaExpected = usuario.getConta();
+    String contaAtual = homePage.obterTextAccountNumber();
+
+    Assert.assertEquals(contaExpected, contaAtual);
   }
 
   @Entao("o saldo da conta deve ser zero")
   public void o_saldo_da_conta_deve_ser_zero() {
-    System.out.println(homePage.obterTextAccountNumber());
-    System.out.println(homePage.obterTextBalance());
-    System.out.println(homePage.obterTextName());
-    System.out.println(homePage.obterTextNameInicial());
-    Assert.assertEquals("0,00", homePage.obterTextBalance());
+    String valorActual = homePage.obterTextBalance();
+
+    Assert.assertEquals("0,00", valorActual);
   }
 
   @Quando("realizar o login com saldo")
   public void realizar_o_login_com_saldo() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
+    Usuario usuario = massaDeDados.get(0);
+
+    loginPage.inserirEmail(usuario.getEmail());
+    loginPage.inserirSenha(usuario.getSenha());
+    loginPage.clickAcessar();
   }
 
   @Entao("a conta deve possuir saldo")
   public void a_conta_deve_possuir_saldo() {
-    Assert.assertEquals("1.000,00", homePage.obterTextBalance());
+    String valorActual = homePage.obterTextBalance();
+
+    Assert.assertEquals("1.000,00", valorActual);
   }
 
   @Quando("clicar em tranferencia")
@@ -70,7 +85,7 @@ public class HomeSteps {
   }
 
   @Entao("a conta deve possuir a função de transferência")
-  public void a_conta_deve_possuir_a_função_de_transferência() {
+  public void a_conta_deve_possuir_a_funcão_de_transferência() {
     Assert.assertTrue(homePage.getCurrentUrl("/transfer").contains("/transfer"));
   }
 
@@ -80,7 +95,7 @@ public class HomeSteps {
   }
 
   @Entao("a conta deve possuir a função de extrato")
-  public void a_conta_deve_possuir_a_função_de_extrato() {
+  public void a_conta_deve_possuir_a_funcão_de_extrato() {
     Assert.assertTrue(homePage.getCurrentUrl("/bank-statement").contains("/bank-statement"));
   }
 

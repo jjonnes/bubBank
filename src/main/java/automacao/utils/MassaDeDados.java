@@ -8,12 +8,6 @@ import java.util.List;
 
 public class MassaDeDados {
 
-  /**
-   * Gera uma lista de usuários com dados aleatórios
-   * 
-   * @param numeroUsuarios quantidade de usuários a serem gerados
-   * @return Lista de usuários
-   */
   public static List<Usuario> gerarUsuarios(int numeroUsuarios) {
     if (numeroUsuarios <= 0) {
       throw new IllegalArgumentException("Número de usuários deve ser maior que zero");
@@ -26,21 +20,15 @@ public class MassaDeDados {
       String nome = faker.name().fullName();
       String email = faker.internet().emailAddress();
       String senha = faker.internet().password(8, 16);
+      String conta = String.valueOf(i);
 
-      usuarios.add(new Usuario(nome, email, senha));
+      usuarios.add(new Usuario(nome, email, senha, conta));
     }
 
     return usuarios;
   }
 
-  /**
-   * Realiza o cadastro de um usuário no sistema
-   * 
-   * @param usuario Usuario a ser cadastrado
-   * @param driver  WebDriver da sessão atual
-   * @throws IllegalArgumentException se usuario ou driver forem nulos
-   */
-  public static void cadastrar(Usuario usuario, WebDriver driver) {
+  public static void cadastrar(Usuario usuario, WebDriver driver, int contaComSaldo) {
     if (usuario == null || driver == null) {
       throw new IllegalArgumentException("Usuário e driver não podem ser nulos");
     }
@@ -52,7 +40,14 @@ public class MassaDeDados {
       registrarPage.inserirSenha(usuario.getSenha());
       registrarPage.inserirNome(usuario.getNome());
       registrarPage.inserirConfirmarSenha(usuario.getSenha());
+      if (contaComSaldo == 1) {
+        registrarPage.clickContaComSaldo();
+      }
       registrarPage.clickCadastrar();
+
+      String numeroConta = registrarPage.obterNumeroDaConta();
+      usuario.setConta(numeroConta);
+
       registrarPage.clicarFechar();
     } catch (Exception e) {
       throw new RuntimeException("Erro ao cadastrar usuário: " + e.getMessage(), e);

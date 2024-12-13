@@ -35,12 +35,21 @@ public class Hooks {
     System.out.println("Configuração inicial realizada");
   }
 
-  @Before(value = "@MassaOn")
-  public void geraMassaDeDados() {
+  @Before(value = "@MassaComSaldo")
+  public void geraMassaDeDadosComSaldo() {
     massaDeDados = MassaDeDados.gerarUsuarios(1);
 
     for (Usuario usuario : massaDeDados) {
-      MassaDeDados.cadastrar(usuario, driver);
+      MassaDeDados.cadastrar(usuario, driver, 1);
+    }
+  }
+
+  @Before(value = "@MassaSemSaldo")
+  public void geraMassaDeDadosSemSaldo() {
+    massaDeDados = MassaDeDados.gerarUsuarios(1);
+
+    for (Usuario usuario : massaDeDados) {
+      MassaDeDados.cadastrar(usuario, driver, 0);
     }
   }
 

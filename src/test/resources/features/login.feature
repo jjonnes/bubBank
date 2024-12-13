@@ -57,7 +57,7 @@ Funcionalidade: testar login
     |email            |msg1               |
     |exemplo@email.com|É campo obrigatório|
 
-  @CT006_InserirEmailESenhaCadastrados  @MassaOn 
+  @CT006_InserirEmailESenhaCadastrados  @MassaComSaldo 
   Esquema do Cenário: Tentar acessar com cadastro
     Dado que eu acesse a plataforma
     Quando inserir email cadastrado no login

@@ -7,10 +7,13 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import automacao.utils.PageUtils;
+import automacao.utils.StepsUtils;
+
 import java.time.Duration;
 
 public class RegistrarPage {
 
+  @SuppressWarnings("unused")
   private WebDriverWait wait;
   private PageUtils pageUtils;
 
@@ -98,6 +101,11 @@ public class RegistrarPage {
 
   public String obterTextoAlerta() {
     return pageUtils.obterTexto(alertaMessage);
+  }
+
+  public String obterNumeroDaConta() {
+    String account = pageUtils.obterTexto(alertaMessage);
+    return StepsUtils.extraiAcconutNumber(account);
   }
 
   public void clicarFechar() {

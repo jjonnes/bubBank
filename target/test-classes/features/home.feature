@@ -3,7 +3,7 @@
 @Home @I 
 Funcionalidade: testa página home
 
-  @CT001_VerificarNomeEInicial @MassaOn
+  @CT001_VerificarNomeEInicial @MassaComSaldo
   Esquema do Cenário: Verificar nome e inicial
     Dado que eu esteja na tela inicial
     Quando realizar o login sem saldo
@@ -13,7 +13,7 @@ Funcionalidade: testa página home
     |   |   |
     |   |   |
 
-  @CT002_VerificarONumeroDaConta
+  @CT002_VerificarONumeroDaConta @MassaSemSaldo
   Esquema do Cenário: Verificar o número da conta
     Dado que eu esteja na tela inicial
     Quando realizar o login sem saldo
@@ -23,7 +23,7 @@ Funcionalidade: testa página home
     |   |   |
     |   |   |
 
-  @CT003_VerificarContaSemSaldo @MassaOn
+  @CT003_VerificarContaSemSaldo @MassaSemSaldo
   Esquema do Cenário: Verificar conta sem saldo
     Dado que eu esteja na tela inicial
     Quando realizar o login sem saldo
@@ -33,7 +33,7 @@ Funcionalidade: testa página home
     |   |   |
     |   |   |
 
-  @CT004_VerificarContaComSaldo @MassaOn
+  @CT004_VerificarContaComSaldo @MassaComSaldo
   Esquema do Cenário: Verificar conta com saldo
     Dado que eu esteja na tela inicial
     Quando realizar o login com saldo
@@ -43,10 +43,10 @@ Funcionalidade: testa página home
     |   |   |
     |   |   |
 
-  @CT005_VerificarFuncaoTrasnferencia @MassaOn
+  @CT005_VerificarFuncaoTrasnferencia @MassaSemSaldo
   Esquema do Cenário: Verificar função de transferência
     Dado que eu esteja na tela inicial
-    Quando realizar o login com saldo
+    Quando realizar o login sem saldo
     E clicar em tranferencia 
     Entao a conta deve possuir a função de transferência
     
@@ -54,10 +54,10 @@ Funcionalidade: testa página home
     |   |   |
     |   |   |
 
-  @CT006_VerificarFuncaoExtrato @MassaOn
+  @CT006_VerificarFuncaoExtrato @MassaSemSaldo
   Esquema do Cenário: Verificar função de extrato
     Dado que eu esteja na tela inicial
-    Quando realizar o login com saldo
+    Quando realizar o login sem saldo
     E clicar em extrato
     Entao a conta deve possuir a função de extrato
     
@@ -65,10 +65,10 @@ Funcionalidade: testa página home
     |   |   |
     |   |   |
 
-  @CT007_VerificarBotaoSair @MassaOn
+  @CT007_VerificarBotaoSair @MassaSemSaldo
   Esquema do Cenário: Verificar botão sair
     Dado que eu esteja na tela inicial
-    E realizar o login com saldo
+    E realizar o login sem saldo
     Quando clicar em sair
     Entao a pagina deve voltar a tela inicial
     

@@ -1,5 +1,7 @@
+automacao\runners\HomeRunner.class
+automacao\steps\CadastroSteps.class
+automacao\runners\LoginRunner.class
 automacao\steps\LoginSteps.class
 automacao\runners\CadastroRunner.class
 automacao\steps\Hooks.class
-automacao\steps\CadastroSteps.class
-automacao\runners\LoginRunner.class
+automacao\steps\HomeSteps.class

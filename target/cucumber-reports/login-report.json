@@ -1,0 +1,705 @@
+[
+  {
+    "line": 4,
+    "elements": [
+      {
+        "start_timestamp": "2024-12-12T23:39:55.794Z",
+        "before": [
+          {
+            "result": {
+              "duration": 4473993700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "automacao.steps.Hooks.setUp()"
+            }
+          },
+          {
+            "result": {
+              "duration": 2912656800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "automacao.steps.Hooks.geraMassaDeDadosComSaldo()"
+            }
+          }
+        ],
+        "line": 14,
+        "name": "Verificar nome e inicial",
+        "description": "",
+        "id": "testa-página-home;verificar-nome-e-inicial;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 458072800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "automacao.steps.Hooks.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Esquema do Cenário",
+        "steps": [
+          {
+            "result": {
+              "duration": 998800,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "que eu esteja na tela inicial",
+            "match": {
+              "location": "automacao.steps.HomeSteps.que_eu_esteja_na_tela_inicial()"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 466231400,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "realizar o login sem saldo",
+            "match": {
+              "location": "automacao.steps.HomeSteps.realizar_o_login_sem_saldo()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 219807300,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "o nome e a inicial deve ser o mesmo de cadastro",
+            "match": {
+              "location": "automacao.steps.HomeSteps.o_nome_e_a_inicial_deve_ser_o_mesmo_de_cadastro()"
+            },
+            "keyword": "Entao "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Home"
+          },
+          {
+            "name": "@I"
+          },
+          {
+            "name": "@CT001_VerificarNomeEInicial"
+          },
+          {
+            "name": "@MassaComSaldo"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-12-12T23:40:04.499Z",
+        "before": [
+          {
+            "result": {
+              "duration": 2437522000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "automacao.steps.Hooks.setUp()"
+            }
+          },
+          {
+            "result": {
+              "duration": 2584085800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "automacao.steps.Hooks.geraMassaDeDadosSemSaldo()"
+            }
+          }
+        ],
+        "line": 24,
+        "name": "Verificar o número da conta",
+        "description": "",
+        "id": "testa-página-home;verificar-o-número-da-conta;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 441727100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "automacao.steps.Hooks.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Esquema do Cenário",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "que eu esteja na tela inicial",
+            "match": {
+              "location": "automacao.steps.HomeSteps.que_eu_esteja_na_tela_inicial()"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 465385300,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "realizar o login sem saldo",
+            "match": {
+              "location": "automacao.steps.HomeSteps.realizar_o_login_sem_saldo()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 219249200,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "o numero da conta deve ser referente ao login realizado",
+            "match": {
+              "location": "automacao.steps.HomeSteps.o_numero_da_conta_deve_ser_referente_ao_login_realizado()"
+            },
+            "keyword": "Entao "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Home"
+          },
+          {
+            "name": "@I"
+          },
+          {
+            "name": "@CT002_VerificarONumeroDaConta"
+          },
+          {
+            "name": "@MassaSemSaldo"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-12-12T23:40:10.681Z",
+        "before": [
+          {
+            "result": {
+              "duration": 2103497100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "automacao.steps.Hooks.setUp()"
+            }
+          },
+          {
+            "result": {
+              "duration": 2409915300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "automacao.steps.Hooks.geraMassaDeDadosSemSaldo()"
+            }
+          }
+        ],
+        "line": 34,
+        "name": "Verificar conta sem saldo",
+        "description": "",
+        "id": "testa-página-home;verificar-conta-sem-saldo;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 376050100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "automacao.steps.Hooks.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Esquema do Cenário",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "que eu esteja na tela inicial",
+            "match": {
+              "location": "automacao.steps.HomeSteps.que_eu_esteja_na_tela_inicial()"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 581054200,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "realizar o login sem saldo",
+            "match": {
+              "location": "automacao.steps.HomeSteps.realizar_o_login_sem_saldo()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 334295400,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "o saldo da conta deve ser zero",
+            "match": {
+              "location": "automacao.steps.HomeSteps.o_saldo_da_conta_deve_ser_zero()"
+            },
+            "keyword": "Entao "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Home"
+          },
+          {
+            "name": "@I"
+          },
+          {
+            "name": "@CT003_VerificarContaSemSaldo"
+          },
+          {
+            "name": "@MassaSemSaldo"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-12-12T23:40:16.508Z",
+        "before": [
+          {
+            "result": {
+              "duration": 2726846800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "automacao.steps.Hooks.setUp()"
+            }
+          },
+          {
+            "result": {
+              "duration": 2102092500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "automacao.steps.Hooks.geraMassaDeDadosComSaldo()"
+            }
+          }
+        ],
+        "line": 44,
+        "name": "Verificar conta com saldo",
+        "description": "",
+        "id": "testa-página-home;verificar-conta-com-saldo;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 532818500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "automacao.steps.Hooks.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Esquema do Cenário",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 38,
+            "name": "que eu esteja na tela inicial",
+            "match": {
+              "location": "automacao.steps.HomeSteps.que_eu_esteja_na_tela_inicial()"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 650446600,
+              "status": "passed"
+            },
+            "line": 39,
+            "name": "realizar o login com saldo",
+            "match": {
+              "location": "automacao.steps.HomeSteps.realizar_o_login_com_saldo()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 263069500,
+              "status": "passed"
+            },
+            "line": 40,
+            "name": "a conta deve possuir saldo",
+            "match": {
+              "location": "automacao.steps.HomeSteps.a_conta_deve_possuir_saldo()"
+            },
+            "keyword": "Entao "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Home"
+          },
+          {
+            "name": "@I"
+          },
+          {
+            "name": "@CT004_VerificarContaComSaldo"
+          },
+          {
+            "name": "@MassaComSaldo"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-12-12T23:40:22.801Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1683819200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "automacao.steps.Hooks.setUp()"
+            }
+          },
+          {
+            "result": {
+              "duration": 2551607000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "automacao.steps.Hooks.geraMassaDeDadosSemSaldo()"
+            }
+          }
+        ],
+        "line": 55,
+        "name": "Verificar função de transferência",
+        "description": "",
+        "id": "testa-página-home;verificar-função-de-transferência;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 384969300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "automacao.steps.Hooks.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Esquema do Cenário",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 48,
+            "name": "que eu esteja na tela inicial",
+            "match": {
+              "location": "automacao.steps.HomeSteps.que_eu_esteja_na_tela_inicial()"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 454982600,
+              "status": "passed"
+            },
+            "line": 49,
+            "name": "realizar o login sem saldo",
+            "match": {
+              "location": "automacao.steps.HomeSteps.realizar_o_login_sem_saldo()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 398581100,
+              "status": "passed"
+            },
+            "line": 50,
+            "name": "clicar em tranferencia",
+            "match": {
+              "location": "automacao.steps.HomeSteps.clicar_em_tranferencia()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 542806600,
+              "status": "passed"
+            },
+            "line": 51,
+            "name": "a conta deve possuir a função de transferência",
+            "match": {
+              "location": "automacao.steps.HomeSteps.a_conta_deve_possuir_a_funcão_de_transferência()"
+            },
+            "keyword": "Entao "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Home"
+          },
+          {
+            "name": "@I"
+          },
+          {
+            "name": "@CT005_VerificarFuncaoTrasnferencia"
+          },
+          {
+            "name": "@MassaSemSaldo"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-12-12T23:40:28.835Z",
+        "before": [
+          {
+            "result": {
+              "duration": 2091588800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "automacao.steps.Hooks.setUp()"
+            }
+          },
+          {
+            "result": {
+              "duration": 2196021800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "automacao.steps.Hooks.geraMassaDeDadosSemSaldo()"
+            }
+          }
+        ],
+        "line": 66,
+        "name": "Verificar função de extrato",
+        "description": "",
+        "id": "testa-página-home;verificar-função-de-extrato;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 376936800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "automacao.steps.Hooks.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Esquema do Cenário",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 59,
+            "name": "que eu esteja na tela inicial",
+            "match": {
+              "location": "automacao.steps.HomeSteps.que_eu_esteja_na_tela_inicial()"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 457131100,
+              "status": "passed"
+            },
+            "line": 60,
+            "name": "realizar o login sem saldo",
+            "match": {
+              "location": "automacao.steps.HomeSteps.realizar_o_login_sem_saldo()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 251000600,
+              "status": "passed"
+            },
+            "line": 61,
+            "name": "clicar em extrato",
+            "match": {
+              "location": "automacao.steps.HomeSteps.clicar_em_extrato()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 522787200,
+              "status": "passed"
+            },
+            "line": 62,
+            "name": "a conta deve possuir a função de extrato",
+            "match": {
+              "location": "automacao.steps.HomeSteps.a_conta_deve_possuir_a_funcão_de_extrato()"
+            },
+            "keyword": "Entao "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Home"
+          },
+          {
+            "name": "@I"
+          },
+          {
+            "name": "@CT006_VerificarFuncaoExtrato"
+          },
+          {
+            "name": "@MassaSemSaldo"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-12-12T23:40:34.744Z",
+        "before": [
+          {
+            "result": {
+              "duration": 2313716600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "automacao.steps.Hooks.setUp()"
+            }
+          },
+          {
+            "result": {
+              "duration": 2092156200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "automacao.steps.Hooks.geraMassaDeDadosSemSaldo()"
+            }
+          }
+        ],
+        "line": 77,
+        "name": "Verificar botão sair",
+        "description": "",
+        "id": "testa-página-home;verificar-botão-sair;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 558680800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "automacao.steps.Hooks.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Esquema do Cenário",
+        "steps": [
+          {
+            "result": {
+              "duration": 999200,
+              "status": "passed"
+            },
+            "line": 70,
+            "name": "que eu esteja na tela inicial",
+            "match": {
+              "location": "automacao.steps.HomeSteps.que_eu_esteja_na_tela_inicial()"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 502283700,
+              "status": "passed"
+            },
+            "line": 71,
+            "name": "realizar o login sem saldo",
+            "match": {
+              "location": "automacao.steps.HomeSteps.realizar_o_login_sem_saldo()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 325680700,
+              "status": "passed"
+            },
+            "line": 72,
+            "name": "clicar em sair",
+            "match": {
+              "location": "automacao.steps.HomeSteps.clicar_em_sair()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 29422000,
+              "status": "passed"
+            },
+            "line": 73,
+            "name": "a pagina deve voltar a tela inicial",
+            "match": {
+              "location": "automacao.steps.HomeSteps.a_pagina_deve_voltar_a_tela_inicial()"
+            },
+            "keyword": "Entao "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Home"
+          },
+          {
+            "name": "@I"
+          },
+          {
+            "name": "@CT007_VerificarBotaoSair"
+          },
+          {
+            "name": "@MassaSemSaldo"
+          }
+        ]
+      }
+    ],
+    "name": "testa página home",
+    "description": "",
+    "id": "testa-página-home",
+    "keyword": "Funcionalidade",
+    "uri": "file:src/test/resources/features/home.feature",
+    "tags": [
+      {
+        "name": "@Home",
+        "type": "Tag",
+        "location": {
+          "line": 3,
+          "column": 1
+        }
+      },
+      {
+        "name": "@I",
+        "type": "Tag",
+        "location": {
+          "line": 3,
+          "column": 7
+        }
+      }
+    ]
+  }
+]

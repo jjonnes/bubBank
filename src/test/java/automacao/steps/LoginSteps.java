@@ -13,12 +13,12 @@ import org.junit.Assert;
 public class LoginSteps {
 
   private LoginPage loginPage;
-  private List<Usuario> massaDeDados = Hooks.getMassaDeDados();
+  private List<Usuario> massaDeDados;
 
   @Dado("que eu acesse a plataforma")
   public void queEuAcesseAPlataforma() {
     loginPage = Hooks.getLoginPage();
-
+    massaDeDados = Hooks.getMassaDeDados();
   }
 
   @Quando("clicar em acessar")
@@ -28,13 +28,18 @@ public class LoginSteps {
 
   @Entao("as mensagens de email e senha devem ser apresentadas {string} e {string}")
   public void asMensagensDeEmaiESenhaDevemSerApresentadas(String msg1, String msg2) {
-    Assert.assertEquals(msg1, loginPage.obterTextoEmailFieldSpan());
-    Assert.assertEquals(msg2, loginPage.obterTextoSenhaFieldSpan());
+    String spanEmailActual = loginPage.obterTextoEmailFieldSpan();
+    String spanSenhaActual = loginPage.obterTextoSenhaFieldSpan();
+
+    Assert.assertEquals(msg1, spanEmailActual);
+    Assert.assertEquals(msg2, spanSenhaActual);
   }
 
   @Quando("inserir um email incompleto no login")
   public void inserirUmEmailIncompleto() {
-    loginPage.inserirEmail("email_incompleto");
+    String emailIncompleto = "exemplo@";
+
+    loginPage.inserirEmail(emailIncompleto);
   }
 
   @Quando("inserir email no login {string}")
@@ -44,22 +49,30 @@ public class LoginSteps {
 
   @Quando("inserir email cadastrado no login")
   public void inserirEmailCadastradoNoLogin() {
-    loginPage.inserirEmail(massaDeDados.get(0).getEmail());
+    Usuario usuario = massaDeDados.get(0);
+
+    loginPage.inserirEmail(usuario.getEmail());
   }
 
   @Entao("a mensagem de email invalido deve ser apresentada {string}")
   public void aMensagemDeLoginDeveSerApresentada(String msg1) {
-    Assert.assertEquals(msg1, loginPage.obterTextoEmailFieldSpan());
+    String spanEmailActual = loginPage.obterTextoEmailFieldSpan();
+
+    Assert.assertEquals(msg1, spanEmailActual);
   }
 
   @Entao("a mensagem de login vazio deve ser apresentada {string}")
   public void aMensagemDeLoginVazioDeveSerApresentada(String msg1) {
-    Assert.assertEquals(msg1, loginPage.obterTextoEmailFieldSpan());
+    String spanEmailActual = loginPage.obterTextoEmailFieldSpan();
+
+    Assert.assertEquals(msg1, spanEmailActual);
   }
 
   @Entao("a mensagem de senha vazia deve ser apresentada {string}")
   public void aMensagemDeSenhaVaziaDeveSerApresentada(String msg1) {
-    Assert.assertEquals(msg1, loginPage.obterTextoSenhaFieldSpan());
+    String spanSenhaActual = loginPage.obterTextoSenhaFieldSpan();
+
+    Assert.assertEquals(msg1, spanSenhaActual);
   }
 
   @Quando("inserir a senha no login {string}")
@@ -69,12 +82,16 @@ public class LoginSteps {
 
   @Quando("inserir a senha cadastrada no login")
   public void inserirASenhaCadastradaNoLogin() {
-    loginPage.inserirSenha(massaDeDados.get(0).getSenha());
+    Usuario usuario = massaDeDados.get(0);
+
+    loginPage.inserirEmail(usuario.getSenha());
   }
 
   @Entao("a mensagem de alerta login não cadastrado deve ser apresentada {string}")
   public void aMensagemDeAlertaLoginDeveSerApresentada(String msg1) {
-    Assert.assertTrue(loginPage.obterTextoDeAlertaUsuarioOuSenhaInvalidos().contains(msg1));
+    boolean modalExpected = loginPage.obterTextoDeAlertaUsuarioOuSenhaInvalidos().contains(msg1);
+
+    Assert.assertTrue(modalExpected);
   }
 
   @Entao("deve acessar a pagina home")
