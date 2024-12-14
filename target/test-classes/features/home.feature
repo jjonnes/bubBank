@@ -1,9 +1,10 @@
 #language: pt
 #encoding: UTF-8
-@Home @I 
+@I @Home 
 Funcionalidade: testa página home
 
-  @CT001_VerificarNomeEInicial @MassaComSaldo
+  @MassaComSaldo
+  @CT001_VerificarNomeEInicial 
   Esquema do Cenário: Verificar nome e inicial
     Dado que eu esteja na tela inicial
     Quando realizar o login sem saldo
@@ -13,7 +14,8 @@ Funcionalidade: testa página home
     |   |   |
     |   |   |
 
-  @CT002_VerificarONumeroDaConta @MassaSemSaldo
+  @MassaSemSaldo
+  @CT002_VerificarONumeroDaConta 
   Esquema do Cenário: Verificar o número da conta
     Dado que eu esteja na tela inicial
     Quando realizar o login sem saldo
@@ -23,7 +25,8 @@ Funcionalidade: testa página home
     |   |   |
     |   |   |
 
-  @CT003_VerificarContaSemSaldo @MassaSemSaldo
+  @MassaSemSaldo
+  @CT003_VerificarContaSemSaldo
   Esquema do Cenário: Verificar conta sem saldo
     Dado que eu esteja na tela inicial
     Quando realizar o login sem saldo
@@ -33,7 +36,8 @@ Funcionalidade: testa página home
     |   |   |
     |   |   |
 
-  @CT004_VerificarContaComSaldo @MassaComSaldo
+  @MassaComSaldo
+  @CT004_VerificarContaComSaldo 
   Esquema do Cenário: Verificar conta com saldo
     Dado que eu esteja na tela inicial
     Quando realizar o login com saldo
@@ -43,29 +47,32 @@ Funcionalidade: testa página home
     |   |   |
     |   |   |
 
-  @CT005_VerificarFuncaoTrasnferencia @MassaSemSaldo
+  @MassaSemSaldo
+  @CT005_VerificarFuncaoTrasnferencia 
   Esquema do Cenário: Verificar função de transferência
     Dado que eu esteja na tela inicial
     Quando realizar o login sem saldo
     E clicar em tranferencia 
-    Entao a conta deve possuir a função de transferência
+    Entao a conta deve possuir a função de transferência "<endPoint>"
     
     Exemplos:
-    |   |   |
-    |   |   |
+    |endPoint |
+    |/transfer|
 
-  @CT006_VerificarFuncaoExtrato @MassaSemSaldo
+  @MassaSemSaldo
+  @CT006_VerificarFuncaoExtrato 
   Esquema do Cenário: Verificar função de extrato
     Dado que eu esteja na tela inicial
     Quando realizar o login sem saldo
     E clicar em extrato
-    Entao a conta deve possuir a função de extrato
+    Entao a conta deve possuir a função de extrato "<endPoint>"
     
     Exemplos:
-    |   |   |
-    |   |   |
+    |endPoint       |
+    |/bank-statement|
 
-  @CT007_VerificarBotaoSair @MassaSemSaldo
+  @MassaSemSaldo
+  @CT007_VerificarBotaoSair 
   Esquema do Cenário: Verificar botão sair
     Dado que eu esteja na tela inicial
     E realizar o login sem saldo

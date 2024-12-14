@@ -1,23 +1,23 @@
 #language: pt
 #encoding: UTF-8
-@Cadastro @I
+@I @Cadastro
 Funcionalidade: Testar cadastro
 
 	@CT001_ClicarEmCadastrarComCamposVazios
 	Esquema do Cenario: Clicar em cadastrar com todos os campos vazios
 		Dado que eu acesse a tela de cadastro
 		Quando clicar em cadastrar
-		Então as mensagens de email senha e confirmar senha devem ser apresentadas "<msg1>", "<msg2>", "<msg3>"
+		Entao as mensagens de email senha e confirmar senha devem ser apresentadas "<msg1>", "<msg2>", "<msg3>", "<msg4>"
 		
 		Exemplos:
-		|msg1               |msg2               |msg3               |
-		|É campo obrigatório|É campo obrigatório|É campo obrigatório|
+		|msg1                   |msg2                    |msg3                    |msg4                              |
+		|Nome não pode ser vazio|Email não pode ser vazio|Senha não pode ser vazio|Confirmar senha não pode ser vazio|
 
 	@CT002_InserirEmailIncompleto
 	Esquema do Cenario: Inserir E-mail incompleto
 		Dado que eu acesse a tela de cadastro
 		Quando inserir um e-mail incompleto no cadastro
-		Então a mensagem em cadastro de email invalido deve ser apresentada "<msg1>"
+		Entao a mensagem em cadastro de email invalido deve ser apresentada "<msg1>"
 		
 		Exemplos:
 		|msg1            |
@@ -30,7 +30,7 @@ Funcionalidade: Testar cadastro
 		E inserir nome no cadastro "<nome>"
 		E inserir email no cadastro "<email>"
 		E clicar em cadastrar
-		Então a mensagem deve ser apresentada em confirmar senha "<msg1>"
+		Entao a mensagem deve ser apresentada em confirmar senha "<msg1>"
 		
 		Exemplos:
 		|msg1               |nome|email            |senha|
@@ -44,7 +44,7 @@ Funcionalidade: Testar cadastro
 		E inserir nome no cadastro "<nome>"
 		E inserir confirmação da senha "<senha>"
 		E clicar em cadastrar
-		Então a mensagem de alerta de cadastro deve ser apresentada "<msg1>"
+		Entao a mensagem de alerta de cadastro deve ser apresentada "<msg1>"
 		
 		Exemplos:
 		|msg1                          |email            |senha|nome|
@@ -59,7 +59,7 @@ Funcionalidade: Testar cadastro
 		E inserir confirmação da senha "<senha>"
 		E marcar a opção conta com saldo
 		E clicar em cadastrar
-		Então a mensagem de alerta de cadastro deve ser apresentada "<msg1>"
+		Entao a mensagem de alerta de cadastro deve ser apresentada "<msg1>"
 
 		Exemplos:
 		|msg1                          |email            |senha|nome|

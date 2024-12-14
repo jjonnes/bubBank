@@ -12,23 +12,23 @@ import java.util.List;
 
 public class Hooks {
 
-  private static WebDriver driver = DriverFactory.getDriver();
+  private static WebDriver driver;
   protected static LoginPage loginPage;
-  protected static RegistrarPage registrarPage;
+  protected static CadastroPage cadastroPage;
   protected static HomePage homePage;
-  // protected static ExtratoPage extratoPage;
-  // protected static TransferenciaPage transferenciaPage;
+  protected static TransferenciaPage transferenciaPage;
   protected static List<Usuario> massaDeDados;
+  protected static ExtratoPage extratoPage;
 
   @Before(value = "@I")
   public void setUp() {
     driver = DriverFactory.getDriver();
 
     loginPage = new LoginPage(driver);
-    registrarPage = new RegistrarPage(driver);
+    cadastroPage = new CadastroPage(driver);
     homePage = new HomePage(driver);
-    // extratoPage = new ExtratoPage(driver);
-    // transferenciaPage = new TransferenciaPage(driver);
+    transferenciaPage = new TransferenciaPage(driver);
+    extratoPage = new ExtratoPage(driver);
 
     driver.get("https://bugbank.netlify.app/");
 
@@ -37,7 +37,7 @@ public class Hooks {
 
   @Before(value = "@MassaComSaldo")
   public void geraMassaDeDadosComSaldo() {
-    massaDeDados = MassaDeDados.gerarUsuarios(1);
+    massaDeDados = MassaDeDados.gerarUsuarios(2);
 
     for (Usuario usuario : massaDeDados) {
       MassaDeDados.cadastrar(usuario, driver, 1);
@@ -67,11 +67,19 @@ public class Hooks {
     return loginPage;
   }
 
-  public static RegistrarPage getRegistrarPage() {
-    return registrarPage;
+  public static CadastroPage getCadastroPage() {
+    return cadastroPage;
   }
 
   public static HomePage getHomePage() {
     return homePage;
+  }
+
+  public static TransferenciaPage getTransferenciaPage() {
+    return transferenciaPage;
+  }
+
+  public static ExtratoPage getExtratoPage() {
+    return extratoPage;
   }
 }

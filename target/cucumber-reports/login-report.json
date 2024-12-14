@@ -3,35 +3,26 @@
     "line": 4,
     "elements": [
       {
-        "start_timestamp": "2024-12-12T23:39:55.794Z",
+        "start_timestamp": "2024-12-14T03:16:28.034Z",
         "before": [
           {
             "result": {
-              "duration": 4473993700,
+              "duration": 5933078300,
               "status": "passed"
             },
             "match": {
               "location": "automacao.steps.Hooks.setUp()"
             }
-          },
-          {
-            "result": {
-              "duration": 2912656800,
-              "status": "passed"
-            },
-            "match": {
-              "location": "automacao.steps.Hooks.geraMassaDeDadosComSaldo()"
-            }
           }
         ],
         "line": 14,
-        "name": "Verificar nome e inicial",
+        "name": "Clicar em acessar",
         "description": "",
-        "id": "testa-página-home;verificar-nome-e-inicial;;2",
+        "id": "testar-login;clicar-em-acessar;;2",
         "after": [
           {
             "result": {
-              "duration": 458072800,
+              "duration": 582002300,
               "status": "passed"
             },
             "match": {
@@ -44,86 +35,85 @@
         "steps": [
           {
             "result": {
-              "duration": 998800,
+              "duration": 999600,
               "status": "passed"
             },
             "line": 8,
-            "name": "que eu esteja na tela inicial",
+            "name": "que eu acesse a plataforma",
             "match": {
-              "location": "automacao.steps.HomeSteps.que_eu_esteja_na_tela_inicial()"
+              "location": "automacao.steps.LoginSteps.queEuAcesseAPlataforma()"
             },
             "keyword": "Dado "
           },
           {
             "result": {
-              "duration": 466231400,
+              "duration": 350997500,
               "status": "passed"
             },
             "line": 9,
-            "name": "realizar o login sem saldo",
+            "name": "clicar em acessar",
             "match": {
-              "location": "automacao.steps.HomeSteps.realizar_o_login_sem_saldo()"
+              "location": "automacao.steps.LoginSteps.clicarEmAcessar()"
             },
             "keyword": "Quando "
           },
           {
             "result": {
-              "duration": 219807300,
-              "status": "passed"
+              "error_message": "org.junit.ComparisonFailure: expected:\u003c[Usuário e senha precisam ser preenchidos]\u003e but was:\u003c[É campo obrigatório]\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:117)\r\n\tat org.junit.Assert.assertEquals(Assert.java:146)\r\n\tat automacao.steps.LoginSteps.asMensagensDeEmaiESenhaDevemSerApresentadas(LoginSteps.java:37)\r\n\tat ✽.as mensagens de email e senha devem ser apresentadas \"Usuário e senha precisam ser preenchidos\" e \"Usuário e senha precisam ser preenchidos\"(file:///C:/Users/joaov/eclipse-workspace/bugBank/src/test/resources/features/login.feature:10)\r\n",
+              "duration": 369001000,
+              "status": "failed"
             },
             "line": 10,
-            "name": "o nome e a inicial deve ser o mesmo de cadastro",
+            "name": "as mensagens de email e senha devem ser apresentadas \"Usuário e senha precisam ser preenchidos\" e \"Usuário e senha precisam ser preenchidos\"",
             "match": {
-              "location": "automacao.steps.HomeSteps.o_nome_e_a_inicial_deve_ser_o_mesmo_de_cadastro()"
+              "arguments": [
+                {
+                  "val": "\"Usuário e senha precisam ser preenchidos\"",
+                  "offset": 53
+                },
+                {
+                  "val": "\"Usuário e senha precisam ser preenchidos\"",
+                  "offset": 98
+                }
+              ],
+              "location": "automacao.steps.LoginSteps.asMensagensDeEmaiESenhaDevemSerApresentadas(java.lang.String,java.lang.String)"
             },
             "keyword": "Entao "
           }
         ],
         "tags": [
           {
-            "name": "@Home"
-          },
-          {
             "name": "@I"
           },
           {
-            "name": "@CT001_VerificarNomeEInicial"
+            "name": "@Login"
           },
           {
-            "name": "@MassaComSaldo"
+            "name": "@CT001_ClicarApenasEmAcessar"
           }
         ]
       },
       {
-        "start_timestamp": "2024-12-12T23:40:04.499Z",
+        "start_timestamp": "2024-12-14T03:16:35.560Z",
         "before": [
           {
             "result": {
-              "duration": 2437522000,
+              "duration": 2471073100,
               "status": "passed"
             },
             "match": {
               "location": "automacao.steps.Hooks.setUp()"
             }
-          },
-          {
-            "result": {
-              "duration": 2584085800,
-              "status": "passed"
-            },
-            "match": {
-              "location": "automacao.steps.Hooks.geraMassaDeDadosSemSaldo()"
-            }
           }
         ],
         "line": 24,
-        "name": "Verificar o número da conta",
+        "name": "Inserir E-mail incompleto",
         "description": "",
-        "id": "testa-página-home;verificar-o-número-da-conta;;2",
+        "id": "testar-login;inserir-e-mail-incompleto;;2",
         "after": [
           {
             "result": {
-              "duration": 441727100,
+              "duration": 1829667000,
               "status": "passed"
             },
             "match": {
@@ -139,82 +129,181 @@
               "status": "passed"
             },
             "line": 18,
-            "name": "que eu esteja na tela inicial",
+            "name": "que eu acesse a plataforma",
             "match": {
-              "location": "automacao.steps.HomeSteps.que_eu_esteja_na_tela_inicial()"
+              "location": "automacao.steps.LoginSteps.queEuAcesseAPlataforma()"
             },
             "keyword": "Dado "
           },
           {
             "result": {
-              "duration": 465385300,
+              "duration": 296982900,
               "status": "passed"
             },
             "line": 19,
-            "name": "realizar o login sem saldo",
+            "name": "inserir um email incompleto no login",
             "match": {
-              "location": "automacao.steps.HomeSteps.realizar_o_login_sem_saldo()"
+              "location": "automacao.steps.LoginSteps.inserirUmEmailIncompleto()"
             },
             "keyword": "Quando "
           },
           {
             "result": {
-              "duration": 219249200,
+              "duration": 94997800,
               "status": "passed"
             },
             "line": 20,
-            "name": "o numero da conta deve ser referente ao login realizado",
+            "name": "a mensagem de email invalido deve ser apresentada \"Formato inválido\"",
             "match": {
-              "location": "automacao.steps.HomeSteps.o_numero_da_conta_deve_ser_referente_ao_login_realizado()"
+              "arguments": [
+                {
+                  "val": "\"Formato inválido\"",
+                  "offset": 50
+                }
+              ],
+              "location": "automacao.steps.LoginSteps.aMensagemDeLoginDeveSerApresentada(java.lang.String)"
             },
             "keyword": "Entao "
           }
         ],
         "tags": [
           {
-            "name": "@Home"
-          },
-          {
             "name": "@I"
           },
           {
-            "name": "@CT002_VerificarONumeroDaConta"
+            "name": "@Login"
           },
           {
-            "name": "@MassaSemSaldo"
+            "name": "@CT002_InserirEmailIncompleto"
           }
         ]
       },
       {
-        "start_timestamp": "2024-12-12T23:40:10.681Z",
+        "start_timestamp": "2024-12-14T03:16:40.322Z",
         "before": [
           {
             "result": {
-              "duration": 2103497100,
+              "duration": 3207994800,
               "status": "passed"
             },
             "match": {
               "location": "automacao.steps.Hooks.setUp()"
             }
-          },
-          {
-            "result": {
-              "duration": 2409915300,
-              "status": "passed"
-            },
-            "match": {
-              "location": "automacao.steps.Hooks.geraMassaDeDadosSemSaldo()"
-            }
           }
         ],
-        "line": 34,
-        "name": "Verificar conta sem saldo",
+        "line": 35,
+        "name": "Inserir apenas a senha",
         "description": "",
-        "id": "testa-página-home;verificar-conta-sem-saldo;;2",
+        "id": "testar-login;inserir-apenas-a-senha;;2",
         "after": [
           {
             "result": {
-              "duration": 376050100,
+              "duration": 718996200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "automacao.steps.Hooks.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Esquema do Cenário",
+        "steps": [
+          {
+            "result": {
+              "duration": 1001200,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "que eu acesse a plataforma",
+            "match": {
+              "location": "automacao.steps.LoginSteps.queEuAcesseAPlataforma()"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 455955700,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "inserir a senha no login \"123\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"123\"",
+                  "offset": 25
+                }
+              ],
+              "location": "automacao.steps.LoginSteps.inserirASenhaNoLogin(java.lang.String)"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 353000800,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "clicar em acessar",
+            "match": {
+              "location": "automacao.steps.LoginSteps.clicarEmAcessar()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "error_message": "org.junit.ComparisonFailure: expected:\u003c[Usuário e senha precisam ser preenchidos]\u003e but was:\u003c[É campo obrigatório]\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:117)\r\n\tat org.junit.Assert.assertEquals(Assert.java:146)\r\n\tat automacao.steps.LoginSteps.aMensagemDeLoginVazioDeveSerApresentada(LoginSteps.java:71)\r\n\tat ✽.a mensagem de login vazio deve ser apresentada \"Usuário e senha precisam ser preenchidos\"(file:///C:/Users/joaov/eclipse-workspace/bugBank/src/test/resources/features/login.feature:31)\r\n",
+              "duration": 102000900,
+              "status": "failed"
+            },
+            "line": 31,
+            "name": "a mensagem de login vazio deve ser apresentada \"Usuário e senha precisam ser preenchidos\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Usuário e senha precisam ser preenchidos\"",
+                  "offset": 47
+                }
+              ],
+              "location": "automacao.steps.LoginSteps.aMensagemDeLoginVazioDeveSerApresentada(java.lang.String)"
+            },
+            "keyword": "Entao "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@I"
+          },
+          {
+            "name": "@Login"
+          },
+          {
+            "name": "@CT003_InserirApenasSenha"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-12-14T03:16:45.204Z",
+        "before": [
+          {
+            "result": {
+              "duration": 3936144600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "automacao.steps.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 47,
+        "name": "Tentar acessar sem cadastro",
+        "description": "",
+        "id": "testar-login;tentar-acessar-sem-cadastro;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 640000500,
               "status": "passed"
             },
             "match": {
@@ -229,59 +318,202 @@
             "result": {
               "status": "passed"
             },
-            "line": 28,
-            "name": "que eu esteja na tela inicial",
+            "line": 39,
+            "name": "que eu acesse a plataforma",
             "match": {
-              "location": "automacao.steps.HomeSteps.que_eu_esteja_na_tela_inicial()"
+              "location": "automacao.steps.LoginSteps.queEuAcesseAPlataforma()"
             },
             "keyword": "Dado "
           },
           {
             "result": {
-              "duration": 581054200,
+              "duration": 1038573400,
               "status": "passed"
             },
-            "line": 29,
-            "name": "realizar o login sem saldo",
+            "line": 40,
+            "name": "inserir email no login \"exemplo@email.com\"",
             "match": {
-              "location": "automacao.steps.HomeSteps.realizar_o_login_sem_saldo()"
+              "arguments": [
+                {
+                  "val": "\"exemplo@email.com\"",
+                  "offset": 23
+                }
+              ],
+              "location": "automacao.steps.LoginSteps.inserirEmailNoLogin(java.lang.String)"
             },
             "keyword": "Quando "
           },
           {
             "result": {
-              "duration": 334295400,
+              "duration": 226812700,
               "status": "passed"
             },
-            "line": 30,
-            "name": "o saldo da conta deve ser zero",
+            "line": 41,
+            "name": "inserir a senha no login \"123\"",
             "match": {
-              "location": "automacao.steps.HomeSteps.o_saldo_da_conta_deve_ser_zero()"
+              "arguments": [
+                {
+                  "val": "\"123\"",
+                  "offset": 25
+                }
+              ],
+              "location": "automacao.steps.LoginSteps.inserirASenhaNoLogin(java.lang.String)"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 239292200,
+              "status": "passed"
+            },
+            "line": 42,
+            "name": "clicar em acessar",
+            "match": {
+              "location": "automacao.steps.LoginSteps.clicarEmAcessar()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 632724900,
+              "status": "passed"
+            },
+            "line": 43,
+            "name": "a mensagem de alerta login não cadastrado deve ser apresentada \"Usuário ou senha inválido.\nTente novamente ou verifique suas informações!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Usuário ou senha inválido.\nTente novamente ou verifique suas informações!\"",
+                  "offset": 63
+                }
+              ],
+              "location": "automacao.steps.LoginSteps.aMensagemDeAlertaLoginDeveSerApresentada(java.lang.String)"
             },
             "keyword": "Entao "
           }
         ],
         "tags": [
           {
-            "name": "@Home"
-          },
-          {
             "name": "@I"
           },
           {
-            "name": "@CT003_VerificarContaSemSaldo"
+            "name": "@Login"
           },
           {
-            "name": "@MassaSemSaldo"
+            "name": "@CT004_InserirEmailESenhaNaoCadastrados"
           }
         ]
       },
       {
-        "start_timestamp": "2024-12-12T23:40:16.508Z",
+        "start_timestamp": "2024-12-14T03:16:51.946Z",
         "before": [
           {
             "result": {
-              "duration": 2726846800,
+              "duration": 3265472400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "automacao.steps.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 58,
+        "name": "Inserir apenas E-mail",
+        "description": "",
+        "id": "testar-login;inserir-apenas-e-mail;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 526999300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "automacao.steps.Hooks.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Esquema do Cenário",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 51,
+            "name": "que eu acesse a plataforma",
+            "match": {
+              "location": "automacao.steps.LoginSteps.queEuAcesseAPlataforma()"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 661426900,
+              "status": "passed"
+            },
+            "line": 52,
+            "name": "inserir email no login \"exemplo@email.com\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"exemplo@email.com\"",
+                  "offset": 23
+                }
+              ],
+              "location": "automacao.steps.LoginSteps.inserirEmailNoLogin(java.lang.String)"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 222000800,
+              "status": "passed"
+            },
+            "line": 53,
+            "name": "clicar em acessar",
+            "match": {
+              "location": "automacao.steps.LoginSteps.clicarEmAcessar()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "error_message": "org.junit.ComparisonFailure: expected:\u003c[Usuário e senha precisam ser preenchidos]\u003e but was:\u003c[É campo obrigatório]\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:117)\r\n\tat org.junit.Assert.assertEquals(Assert.java:146)\r\n\tat automacao.steps.LoginSteps.aMensagemDeSenhaVaziaDeveSerApresentada(LoginSteps.java:78)\r\n\tat ✽.a mensagem de senha vazia deve ser apresentada \"Usuário e senha precisam ser preenchidos\"(file:///C:/Users/joaov/eclipse-workspace/bugBank/src/test/resources/features/login.feature:54)\r\n",
+              "duration": 90001600,
+              "status": "failed"
+            },
+            "line": 54,
+            "name": "a mensagem de senha vazia deve ser apresentada \"Usuário e senha precisam ser preenchidos\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Usuário e senha precisam ser preenchidos\"",
+                  "offset": 47
+                }
+              ],
+              "location": "automacao.steps.LoginSteps.aMensagemDeSenhaVaziaDeveSerApresentada(java.lang.String)"
+            },
+            "keyword": "Entao "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@I"
+          },
+          {
+            "name": "@Login"
+          },
+          {
+            "name": "@CT005_InserirApenasEmail"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-12-14T03:16:56.766Z",
+        "before": [
+          {
+            "result": {
+              "duration": 2668119500,
               "status": "passed"
             },
             "match": {
@@ -290,7 +522,7 @@
           },
           {
             "result": {
-              "duration": 2102092500,
+              "duration": 6051272800,
               "status": "passed"
             },
             "match": {
@@ -298,14 +530,14 @@
             }
           }
         ],
-        "line": 44,
-        "name": "Verificar conta com saldo",
+        "line": 71,
+        "name": "Tentar acessar com cadastro",
         "description": "",
-        "id": "testa-página-home;verificar-conta-com-saldo;;2",
+        "id": "testar-login;tentar-acessar-com-cadastro;;2",
         "after": [
           {
             "result": {
-              "duration": 532818500,
+              "duration": 433001500,
               "status": "passed"
             },
             "match": {
@@ -320,372 +552,92 @@
             "result": {
               "status": "passed"
             },
-            "line": 38,
-            "name": "que eu esteja na tela inicial",
+            "line": 63,
+            "name": "que eu acesse a plataforma",
             "match": {
-              "location": "automacao.steps.HomeSteps.que_eu_esteja_na_tela_inicial()"
+              "location": "automacao.steps.LoginSteps.queEuAcesseAPlataforma()"
             },
             "keyword": "Dado "
           },
           {
             "result": {
-              "duration": 650446600,
+              "duration": 205002800,
               "status": "passed"
             },
-            "line": 39,
-            "name": "realizar o login com saldo",
+            "line": 64,
+            "name": "inserir email cadastrado no login",
             "match": {
-              "location": "automacao.steps.HomeSteps.realizar_o_login_com_saldo()"
+              "location": "automacao.steps.LoginSteps.inserirEmailCadastradoNoLogin()"
             },
             "keyword": "Quando "
           },
           {
             "result": {
-              "duration": 263069500,
+              "duration": 177000500,
               "status": "passed"
             },
-            "line": 40,
-            "name": "a conta deve possuir saldo",
+            "line": 65,
+            "name": "inserir a senha cadastrada no login",
             "match": {
-              "location": "automacao.steps.HomeSteps.a_conta_deve_possuir_saldo()"
+              "location": "automacao.steps.LoginSteps.inserirASenhaCadastradaNoLogin()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 220514000,
+              "status": "passed"
+            },
+            "line": 66,
+            "name": "clicar em acessar",
+            "match": {
+              "location": "automacao.steps.LoginSteps.clicarEmAcessar()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 529187300,
+              "status": "passed"
+            },
+            "line": 67,
+            "name": "deve acessar a pagina home \"/home\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"/home\"",
+                  "offset": 27
+                }
+              ],
+              "location": "automacao.steps.LoginSteps.deveAcessarAPaginaHome(java.lang.String)"
             },
             "keyword": "Entao "
           }
         ],
         "tags": [
           {
-            "name": "@Home"
-          },
-          {
             "name": "@I"
           },
           {
-            "name": "@CT004_VerificarContaComSaldo"
+            "name": "@Login"
           },
           {
             "name": "@MassaComSaldo"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2024-12-12T23:40:22.801Z",
-        "before": [
-          {
-            "result": {
-              "duration": 1683819200,
-              "status": "passed"
-            },
-            "match": {
-              "location": "automacao.steps.Hooks.setUp()"
-            }
           },
           {
-            "result": {
-              "duration": 2551607000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "automacao.steps.Hooks.geraMassaDeDadosSemSaldo()"
-            }
-          }
-        ],
-        "line": 55,
-        "name": "Verificar função de transferência",
-        "description": "",
-        "id": "testa-página-home;verificar-função-de-transferência;;2",
-        "after": [
-          {
-            "result": {
-              "duration": 384969300,
-              "status": "passed"
-            },
-            "match": {
-              "location": "automacao.steps.Hooks.tearDown()"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Esquema do Cenário",
-        "steps": [
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 48,
-            "name": "que eu esteja na tela inicial",
-            "match": {
-              "location": "automacao.steps.HomeSteps.que_eu_esteja_na_tela_inicial()"
-            },
-            "keyword": "Dado "
-          },
-          {
-            "result": {
-              "duration": 454982600,
-              "status": "passed"
-            },
-            "line": 49,
-            "name": "realizar o login sem saldo",
-            "match": {
-              "location": "automacao.steps.HomeSteps.realizar_o_login_sem_saldo()"
-            },
-            "keyword": "Quando "
-          },
-          {
-            "result": {
-              "duration": 398581100,
-              "status": "passed"
-            },
-            "line": 50,
-            "name": "clicar em tranferencia",
-            "match": {
-              "location": "automacao.steps.HomeSteps.clicar_em_tranferencia()"
-            },
-            "keyword": "E "
-          },
-          {
-            "result": {
-              "duration": 542806600,
-              "status": "passed"
-            },
-            "line": 51,
-            "name": "a conta deve possuir a função de transferência",
-            "match": {
-              "location": "automacao.steps.HomeSteps.a_conta_deve_possuir_a_funcão_de_transferência()"
-            },
-            "keyword": "Entao "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@Home"
-          },
-          {
-            "name": "@I"
-          },
-          {
-            "name": "@CT005_VerificarFuncaoTrasnferencia"
-          },
-          {
-            "name": "@MassaSemSaldo"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2024-12-12T23:40:28.835Z",
-        "before": [
-          {
-            "result": {
-              "duration": 2091588800,
-              "status": "passed"
-            },
-            "match": {
-              "location": "automacao.steps.Hooks.setUp()"
-            }
-          },
-          {
-            "result": {
-              "duration": 2196021800,
-              "status": "passed"
-            },
-            "match": {
-              "location": "automacao.steps.Hooks.geraMassaDeDadosSemSaldo()"
-            }
-          }
-        ],
-        "line": 66,
-        "name": "Verificar função de extrato",
-        "description": "",
-        "id": "testa-página-home;verificar-função-de-extrato;;2",
-        "after": [
-          {
-            "result": {
-              "duration": 376936800,
-              "status": "passed"
-            },
-            "match": {
-              "location": "automacao.steps.Hooks.tearDown()"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Esquema do Cenário",
-        "steps": [
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 59,
-            "name": "que eu esteja na tela inicial",
-            "match": {
-              "location": "automacao.steps.HomeSteps.que_eu_esteja_na_tela_inicial()"
-            },
-            "keyword": "Dado "
-          },
-          {
-            "result": {
-              "duration": 457131100,
-              "status": "passed"
-            },
-            "line": 60,
-            "name": "realizar o login sem saldo",
-            "match": {
-              "location": "automacao.steps.HomeSteps.realizar_o_login_sem_saldo()"
-            },
-            "keyword": "Quando "
-          },
-          {
-            "result": {
-              "duration": 251000600,
-              "status": "passed"
-            },
-            "line": 61,
-            "name": "clicar em extrato",
-            "match": {
-              "location": "automacao.steps.HomeSteps.clicar_em_extrato()"
-            },
-            "keyword": "E "
-          },
-          {
-            "result": {
-              "duration": 522787200,
-              "status": "passed"
-            },
-            "line": 62,
-            "name": "a conta deve possuir a função de extrato",
-            "match": {
-              "location": "automacao.steps.HomeSteps.a_conta_deve_possuir_a_funcão_de_extrato()"
-            },
-            "keyword": "Entao "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@Home"
-          },
-          {
-            "name": "@I"
-          },
-          {
-            "name": "@CT006_VerificarFuncaoExtrato"
-          },
-          {
-            "name": "@MassaSemSaldo"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2024-12-12T23:40:34.744Z",
-        "before": [
-          {
-            "result": {
-              "duration": 2313716600,
-              "status": "passed"
-            },
-            "match": {
-              "location": "automacao.steps.Hooks.setUp()"
-            }
-          },
-          {
-            "result": {
-              "duration": 2092156200,
-              "status": "passed"
-            },
-            "match": {
-              "location": "automacao.steps.Hooks.geraMassaDeDadosSemSaldo()"
-            }
-          }
-        ],
-        "line": 77,
-        "name": "Verificar botão sair",
-        "description": "",
-        "id": "testa-página-home;verificar-botão-sair;;2",
-        "after": [
-          {
-            "result": {
-              "duration": 558680800,
-              "status": "passed"
-            },
-            "match": {
-              "location": "automacao.steps.Hooks.tearDown()"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Esquema do Cenário",
-        "steps": [
-          {
-            "result": {
-              "duration": 999200,
-              "status": "passed"
-            },
-            "line": 70,
-            "name": "que eu esteja na tela inicial",
-            "match": {
-              "location": "automacao.steps.HomeSteps.que_eu_esteja_na_tela_inicial()"
-            },
-            "keyword": "Dado "
-          },
-          {
-            "result": {
-              "duration": 502283700,
-              "status": "passed"
-            },
-            "line": 71,
-            "name": "realizar o login sem saldo",
-            "match": {
-              "location": "automacao.steps.HomeSteps.realizar_o_login_sem_saldo()"
-            },
-            "keyword": "E "
-          },
-          {
-            "result": {
-              "duration": 325680700,
-              "status": "passed"
-            },
-            "line": 72,
-            "name": "clicar em sair",
-            "match": {
-              "location": "automacao.steps.HomeSteps.clicar_em_sair()"
-            },
-            "keyword": "Quando "
-          },
-          {
-            "result": {
-              "duration": 29422000,
-              "status": "passed"
-            },
-            "line": 73,
-            "name": "a pagina deve voltar a tela inicial",
-            "match": {
-              "location": "automacao.steps.HomeSteps.a_pagina_deve_voltar_a_tela_inicial()"
-            },
-            "keyword": "Entao "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@Home"
-          },
-          {
-            "name": "@I"
-          },
-          {
-            "name": "@CT007_VerificarBotaoSair"
-          },
-          {
-            "name": "@MassaSemSaldo"
+            "name": "@CT006_InserirEmailESenhaCadastrados"
           }
         ]
       }
     ],
-    "name": "testa página home",
+    "name": "testar login",
     "description": "",
-    "id": "testa-página-home",
+    "id": "testar-login",
     "keyword": "Funcionalidade",
-    "uri": "file:src/test/resources/features/home.feature",
+    "uri": "file:src/test/resources/features/login.feature",
     "tags": [
       {
-        "name": "@Home",
+        "name": "@I",
         "type": "Tag",
         "location": {
           "line": 3,
@@ -693,11 +645,11 @@
         }
       },
       {
-        "name": "@I",
+        "name": "@Login",
         "type": "Tag",
         "location": {
           "line": 3,
-          "column": 7
+          "column": 4
         }
       }
     ]

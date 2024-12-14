@@ -1,7 +1,7 @@
 package automacao.utils;
 
 import com.github.javafaker.Faker;
-import automacao.pages.RegistrarPage;
+import automacao.pages.CadastroPage;
 import org.openqa.selenium.WebDriver;
 import java.util.ArrayList;
 import java.util.List;
@@ -34,7 +34,7 @@ public class MassaDeDados {
     }
 
     try {
-      RegistrarPage registrarPage = new RegistrarPage(driver);
+      CadastroPage registrarPage = new CadastroPage(driver);
       registrarPage.clickRegistrar();
       registrarPage.inserirEmail(usuario.getEmail());
       registrarPage.inserirSenha(usuario.getSenha());

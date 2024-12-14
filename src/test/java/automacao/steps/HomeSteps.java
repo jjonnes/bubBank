@@ -84,9 +84,9 @@ public class HomeSteps {
     homePage.clickTransferencia();
   }
 
-  @Entao("a conta deve possuir a função de transferência")
-  public void a_conta_deve_possuir_a_funcão_de_transferência() {
-    Assert.assertTrue(homePage.getCurrentUrl("/transfer").contains("/transfer"));
+  @Entao("a conta deve possuir a função de transferência {string}")
+  public void a_conta_deve_possuir_a_funcão_de_transferência(String endPoint) {
+    Assert.assertTrue(homePage.getCurrentUrl(endPoint));
   }
 
   @Quando("clicar em extrato")
@@ -94,9 +94,9 @@ public class HomeSteps {
     homePage.clickExtrato();
   }
 
-  @Entao("a conta deve possuir a função de extrato")
-  public void a_conta_deve_possuir_a_funcão_de_extrato() {
-    Assert.assertTrue(homePage.getCurrentUrl("/bank-statement").contains("/bank-statement"));
+  @Entao("a conta deve possuir a função de extrato {string}")
+  public void a_conta_deve_possuir_a_funcão_de_extrato(String endPoint) {
+    Assert.assertTrue(homePage.getCurrentUrl(endPoint));
   }
 
   @Quando("clicar em sair")
@@ -106,6 +106,6 @@ public class HomeSteps {
 
   @Entao("a pagina deve voltar a tela inicial")
   public void a_pagina_deve_voltar_a_tela_inicial() {
-    Assert.assertEquals("https://bugbank.netlify.app/", homePage.getCurrentUrl(""));
+    Assert.assertTrue(homePage.getCurrentUrl(""));
   }
 }

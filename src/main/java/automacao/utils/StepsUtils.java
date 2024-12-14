@@ -39,4 +39,14 @@ public class StepsUtils {
   public static String extraiAcconutNumber(String input) {
     return input.replaceAll(".*?(\\d+-\\d).*", "$1");
   }
+
+  public static String extraiAccountNumber(String input, boolean digito) {
+    if (digito) {
+      return input.replaceAll(".*?\\d+-(\\d+).*", "$1");
+    } else if (!digito) {
+      return input.replaceAll(".*?(\\d+)-\\d+.*", "$1");
+    } else {
+      throw new IllegalArgumentException("");
+    }
+  }
 }

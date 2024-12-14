@@ -4,7 +4,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import automacao.utils.PageUtils;
@@ -13,7 +12,9 @@ import java.time.Duration;
 
 public class LoginPage {
 
+  @SuppressWarnings("unused")
   private WebDriver driver;
+  @SuppressWarnings("unused")
   private WebDriverWait wait;
   private PageUtils pageUtils;
 
@@ -72,16 +73,4 @@ public class LoginPage {
   public String obterTextoDeAlertaUsuarioOuSenhaInvalidos() {
     return pageUtils.obterTexto(usuarioOuSenhaAlert);
   }
-
-  ////////////////
-  public boolean isLoginPage() {
-    return wait.until(ExpectedConditions.visibilityOf(acessarButton)).isDisplayed();
-  }
-
-  public String getCurrentUrl(String arg) {
-    wait.until(ExpectedConditions.urlContains(arg));
-    return driver.getCurrentUrl();
-
-  }
-  //////////////////////////
 }

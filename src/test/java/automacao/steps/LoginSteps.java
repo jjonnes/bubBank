@@ -1,5 +1,6 @@
 package automacao.steps;
 
+import automacao.pages.HomePage;
 import automacao.pages.LoginPage;
 import automacao.utils.Usuario;
 import io.cucumber.java.pt.Dado;
@@ -13,11 +14,13 @@ import org.junit.Assert;
 public class LoginSteps {
 
   private LoginPage loginPage;
+  private HomePage homePage;
   private List<Usuario> massaDeDados;
 
   @Dado("que eu acesse a plataforma")
   public void queEuAcesseAPlataforma() {
     loginPage = Hooks.getLoginPage();
+    homePage = Hooks.getHomePage();
     massaDeDados = Hooks.getMassaDeDados();
   }
 
@@ -84,7 +87,7 @@ public class LoginSteps {
   public void inserirASenhaCadastradaNoLogin() {
     Usuario usuario = massaDeDados.get(0);
 
-    loginPage.inserirEmail(usuario.getSenha());
+    loginPage.inserirSenha(usuario.getSenha());
   }
 
   @Entao("a mensagem de alerta login não cadastrado deve ser apresentada {string}")
@@ -94,8 +97,8 @@ public class LoginSteps {
     Assert.assertTrue(modalExpected);
   }
 
-  @Entao("deve acessar a pagina home")
-  public void deveAcessarAPaginaHome() {
-    Assert.assertTrue(loginPage.getCurrentUrl("/home").contains("/home"));
+  @Entao("deve acessar a pagina home {string}")
+  public void deveAcessarAPaginaHome(String endPoint) {
+    Assert.assertTrue(homePage.getCurrentUrl(endPoint));
   }
 }

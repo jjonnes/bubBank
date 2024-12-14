@@ -11,14 +11,14 @@ import automacao.utils.StepsUtils;
 
 import java.time.Duration;
 
-public class RegistrarPage {
+public class CadastroPage {
 
   @SuppressWarnings("unused")
   private WebDriverWait wait;
   private PageUtils pageUtils;
 
-  public RegistrarPage(WebDriver driver) {
-    this.wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+  public CadastroPage(WebDriver driver) {
+    this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     this.pageUtils = new PageUtils(driver);
     PageFactory.initElements(driver, this);
   }
@@ -34,6 +34,9 @@ public class RegistrarPage {
 
   @FindBy(xpath = "//*[@id=\"__next\"]/div/div[2]/div/div[2]/form/div[3]/input")
   private WebElement nomeField;
+
+  @FindBy(xpath = "//*[@id=\"__next\"]/div/div[2]/div/div[2]/form/div[3]/p")
+  private WebElement nomeFieldSpan;
 
   @FindBy(xpath = "//*[@id=\"__next\"]/div/div[2]/div/div[2]/form/div[4]/div/input")
   private WebElement senhaField;
@@ -89,6 +92,10 @@ public class RegistrarPage {
 
   public String obterTextoEmailFieldSpan() {
     return pageUtils.obterTexto(emailFieldSpan);
+  }
+
+  public String obterTextoNomeFieldSpan() {
+    return pageUtils.obterTexto(nomeFieldSpan);
   }
 
   public String obterTextoSenhaFieldSpan() {

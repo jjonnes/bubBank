@@ -11,19 +11,19 @@ import automacao.utils.PageUtils;
 import automacao.utils.StepsUtils;
 
 import java.time.Duration;
+import org.openqa.selenium.TimeoutException;
 
 public class HomePage {
 
+  @SuppressWarnings("unused")
   private WebDriver driver;
   private WebDriverWait wait;
   private PageUtils pageUtils;
-  //private StepsUtils stepsUtils;
 
   public HomePage(WebDriver driver) {
     this.driver = driver;
     this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     this.pageUtils = new PageUtils(driver);
-    //this.stepsUtils = new StepsUtils();
     PageFactory.initElements(driver, this);
   }
 
@@ -79,8 +79,12 @@ public class HomePage {
     pageUtils.clicar(exitButton);
   }
 
-  public String getCurrentUrl(String arg) {
-    wait.until(ExpectedConditions.urlContains(arg));
-    return driver.getCurrentUrl();
+  public boolean getCurrentUrl(String arg) {
+    try {
+      wait.until(ExpectedConditions.urlContains(arg));
+      return true;
+    } catch (TimeoutException e) {
+      return false;
+    }
   }
 }

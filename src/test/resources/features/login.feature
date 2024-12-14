@@ -1,6 +1,6 @@
 #language: pt
 #encoding: UTF-8
-@Login @I
+@I @Login
 Funcionalidade: testar login
 
   @CT001_ClicarApenasEmAcessar
@@ -10,8 +10,8 @@ Funcionalidade: testar login
     Entao as mensagens de email e senha devem ser apresentadas "<msg1>" e "<msg2>"
     
     Exemplos:
-    |msg1               |msg2               |
-    |É campo obrigatório|É campo obrigatório|
+    |msg1                                    |msg2                                    |
+    |Usuário e senha precisam ser preenchidos|Usuário e senha precisam ser preenchidos|
     
   @CT002_InserirEmailIncompleto 
   Esquema do Cenário: Inserir E-mail incompleto
@@ -31,8 +31,8 @@ Funcionalidade: testar login
     Entao a mensagem de login vazio deve ser apresentada "<msg1>"
     
     Exemplos:
-    |msg1               |senha|
-    |É campo obrigatório|123  |
+    |msg1                                    |senha|
+    |Usuário e senha precisam ser preenchidos|123  |
     
   @CT004_InserirEmailESenhaNaoCadastrados 
   Esquema do Cenário: Tentar acessar sem cadastro
@@ -54,17 +54,18 @@ Funcionalidade: testar login
     Entao a mensagem de senha vazia deve ser apresentada "<msg1>"
     
     Exemplos:
-    |email            |msg1               |
-    |exemplo@email.com|É campo obrigatório|
+    |email            |msg1                                    |
+    |exemplo@email.com|Usuário e senha precisam ser preenchidos|
 
-  @CT006_InserirEmailESenhaCadastrados  @MassaComSaldo 
+  @MassaComSaldo
+  @CT006_InserirEmailESenhaCadastrados  
   Esquema do Cenário: Tentar acessar com cadastro
     Dado que eu acesse a plataforma
     Quando inserir email cadastrado no login
     E inserir a senha cadastrada no login
     E clicar em acessar
-    Entao deve acessar a pagina home
+    Entao deve acessar a pagina home "<endPoint>"
 
     Exemplos:
-    |   |   |
-    |   |   |
+    |endPoint|
+    |/home   |
