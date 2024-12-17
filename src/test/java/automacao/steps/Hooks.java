@@ -12,7 +12,7 @@ import java.util.List;
 
 public class Hooks {
 
-  private static WebDriver driver;
+  protected static WebDriver driver;
   protected static LoginPage loginPage;
   protected static CadastroPage cadastroPage;
   protected static HomePage homePage;
@@ -20,8 +20,23 @@ public class Hooks {
   protected static List<Usuario> massaDeDados;
   protected static ExtratoPage extratoPage;
 
-  @Before(value = "@I")
-  public void setUp() {
+  @Before("@MassaComSaldo")
+  public void setUpI() {
+    setUp(2, true);
+  }
+
+  @Before(value = "@MassaSemSaldo")
+  public void setUpII() {
+    setUp(1, false);
+  }
+
+  @After
+  public void tearDown() throws InterruptedException {
+    DriverFactory.closeDriver();
+    System.out.println("Cenário realizado e driver fechado");
+  }
+
+  private void setUp(int numeroUsuarios, boolean contaComSaldo) {
     driver = DriverFactory.getDriver();
 
     loginPage = new LoginPage(driver);
@@ -33,30 +48,11 @@ public class Hooks {
     driver.get("https://bugbank.netlify.app/");
 
     System.out.println("Configuração inicial realizada");
-  }
 
-  @Before(value = "@MassaComSaldo")
-  public void geraMassaDeDadosComSaldo() {
-    massaDeDados = MassaDeDados.gerarUsuarios(2);
-
+    massaDeDados = MassaDeDados.gerarUsuarios(numeroUsuarios);
     for (Usuario usuario : massaDeDados) {
-      MassaDeDados.cadastrar(usuario, driver, 1);
+      MassaDeDados.cadastrar(usuario, driver, contaComSaldo);
     }
-  }
-
-  @Before(value = "@MassaSemSaldo")
-  public void geraMassaDeDadosSemSaldo() {
-    massaDeDados = MassaDeDados.gerarUsuarios(1);
-
-    for (Usuario usuario : massaDeDados) {
-      MassaDeDados.cadastrar(usuario, driver, 0);
-    }
-  }
-
-  @After
-  public void tearDown() throws InterruptedException {
-    DriverFactory.closeDriver();
-    System.out.println("Cenário realizado e driver fechado");
   }
 
   public static List<Usuario> getMassaDeDados() {

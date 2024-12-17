@@ -1,6 +1,6 @@
 #language: pt
 #encoding: UTF-8
-@I @Home 
+@Home
 Funcionalidade: testa página home
 
   @MassaComSaldo

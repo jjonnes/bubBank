@@ -1,0 +1,118 @@
+[
+  {
+    "line": 4,
+    "elements": [
+      {
+        "start_timestamp": "2024-12-17T20:50:57.817Z",
+        "before": [
+          {
+            "result": {
+              "duration": 8622167300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "automacao.steps.Hooks.setUpI()"
+            }
+          }
+        ],
+        "line": 33,
+        "name": "Validar transferência enviada",
+        "description": "",
+        "id": "testar-extrato;validar-transferência-enviada;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 313003300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "automacao.steps.Hooks.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Cenário",
+        "steps": [
+          {
+            "result": {
+              "duration": 770519100,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "que eu estou na página de extrato",
+            "match": {
+              "location": "automacao.steps.ExtratoSteps.que_eu_estou_na_página_de_extrato()"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 2454380300,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "eu realizar uma transferência de \"100\" com a descrição \"pagamento\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"100\"",
+                  "offset": 33
+                },
+                {
+                  "val": "\"pagamento\"",
+                  "offset": 55
+                }
+              ],
+              "location": "automacao.steps.ExtratoSteps.euRealizarUmaTransferênciaDeReaisComADescrição(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 66995800,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "devo visualizar a transação em vermelho com a descricao \"pagamento\" e o valor negativo",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"pagamento\"",
+                  "offset": 56
+                }
+              ],
+              "location": "automacao.steps.ExtratoSteps.devoVisualizarATransaçãoEmVermelhoComADescricaoEOValor(java.lang.String)"
+            },
+            "keyword": "Então "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Extrato"
+          },
+          {
+            "name": "@CT003_ValidarTransferenciaEnviada"
+          },
+          {
+            "name": "@MassaComSaldo"
+          }
+        ]
+      }
+    ],
+    "name": "Testar extrato",
+    "description": "",
+    "id": "testar-extrato",
+    "keyword": "Funcionalidade",
+    "uri": "file:src/test/resources/features/extrato.feature",
+    "tags": [
+      {
+        "name": "@Extrato",
+        "type": "Tag",
+        "location": {
+          "line": 3,
+          "column": 1
+        }
+      }
+    ]
+  }
+]

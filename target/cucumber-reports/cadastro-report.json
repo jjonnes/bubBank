@@ -3,25 +3,15 @@
     "line": 4,
     "elements": [
       {
-        "start_timestamp": "2024-12-14T18:00:29.114Z",
+        "start_timestamp": "2024-12-17T20:38:47.009Z",
         "before": [
           {
             "result": {
-              "error_message": "java.lang.IllegalArgumentException: Usuário e driver não podem ser nulos\r\n\tat automacao.utils.MassaDeDados.cadastrar(MassaDeDados.java:33)\r\n\tat automacao.steps.Hooks.geraMassaDeDadosComSaldo(Hooks.java:43)\r\n",
-              "duration": 585199400,
-              "status": "failed"
-            },
-            "match": {
-              "location": "automacao.steps.Hooks.geraMassaDeDadosComSaldo()"
-            }
-          },
-          {
-            "result": {
-              "duration": 8212261600,
+              "duration": 8688107800,
               "status": "passed"
             },
             "match": {
-              "location": "automacao.steps.Hooks.setUp()"
+              "location": "automacao.steps.Hooks.setUpI()"
             }
           }
         ],
@@ -32,7 +22,7 @@
         "after": [
           {
             "result": {
-              "duration": 511900000,
+              "duration": 467549600,
               "status": "passed"
             },
             "match": {
@@ -45,8 +35,8 @@
         "steps": [
           {
             "result": {
-              "duration": 2110200,
-              "status": "skipped"
+              "duration": 718134500,
+              "status": "passed"
             },
             "line": 9,
             "name": "que eu estou na página de transferência",
@@ -57,8 +47,8 @@
           },
           {
             "result": {
-              "duration": 1013400,
-              "status": "skipped"
+              "duration": 378999600,
+              "status": "passed"
             },
             "line": 10,
             "name": "inserir o número da conta inexistente \"123456-0\" e o dígito \"123456-0\"",
@@ -79,8 +69,8 @@
           },
           {
             "result": {
-              "duration": 997600,
-              "status": "skipped"
+              "duration": 162000400,
+              "status": "passed"
             },
             "line": 11,
             "name": "inserir o campo descrição com \"Pagamento\"",
@@ -97,7 +87,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 151993800,
+              "status": "passed"
             },
             "line": 12,
             "name": "inserir o valor da transferência com \"100\"",
@@ -114,7 +105,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 116997400,
+              "status": "passed"
             },
             "line": 13,
             "name": "clicar no botão Tranferir agora",
@@ -125,8 +117,8 @@
           },
           {
             "result": {
-              "duration": 999400,
-              "status": "skipped"
+              "duration": 585743800,
+              "status": "passed"
             },
             "line": 14,
             "name": "eu devo ver a mensagem \"Conta inválida ou inexistente\"",
@@ -139,44 +131,31 @@
               ],
               "location": "automacao.steps.TransferenciaSteps.eu_devo_ver_a_mensagem_de_erro(java.lang.String)"
             },
-            "keyword": "Então "
+            "keyword": "Entao "
           }
         ],
         "tags": [
           {
-            "name": "@I"
-          },
-          {
             "name": "@Transferencia"
           },
           {
-            "name": "@MassaComSaldo"
+            "name": "@CT001_TransferenciaContaInvalida"
           },
           {
-            "name": "@CT001_TransferenciaContaInvalida"
+            "name": "@MassaComSaldo"
           }
         ]
       },
       {
-        "start_timestamp": "2024-12-14T18:00:38.661Z",
+        "start_timestamp": "2024-12-17T20:38:58.561Z",
         "before": [
           {
             "result": {
-              "error_message": "java.lang.RuntimeException: Erro ao cadastrar usuário: Session ID is null. Using WebDriver after calling quit()?\nBuild info: version: \u00274.14.0\u0027, revision: \u0027e5a96349ce\u0027\nSystem info: os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002717.0.10\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [null, findElement {using\u003dxpath, value\u003d//*[@id\u003d\"__next\"]/div/div[2]/div/div[1]/form/div[3]/button[2]}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.140, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\\Users\\joaov\\AppData\\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61960}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61960/devtoo..., se:cdpVersion: 131.0.6778.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\r\n\tat automacao.utils.MassaDeDados.cadastrar(MassaDeDados.java:53)\r\n\tat automacao.steps.Hooks.geraMassaDeDadosComSaldo(Hooks.java:43)\r\nCaused by: org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?\nBuild info: version: \u00274.14.0\u0027, revision: \u0027e5a96349ce\u0027\nSystem info: os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002717.0.10\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [null, findElement {using\u003dxpath, value\u003d//*[@id\u003d\"__next\"]/div/div[2]/div/div[1]/form/div[3]/button[2]}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.140, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\\Users\\joaov\\AppData\\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61960}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61960/devtoo..., se:cdpVersion: 131.0.6778.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:152)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)\r\n\tat org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)\r\n\tat org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)\r\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)\r\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)\r\n\tat jdk.proxy2/jdk.proxy2.$Proxy22.isDisplayed(Unknown Source)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)\r\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:205)\r\n\tat automacao.utils.PageUtils.clicar(PageUtils.java:31)\r\n\tat automacao.pages.CadastroPage.clickRegistrar(CadastroPage.java:90)\r\n\tat automacao.utils.MassaDeDados.cadastrar(MassaDeDados.java:38)\r\n\tat automacao.steps.Hooks.geraMassaDeDadosComSaldo(Hooks.java:43)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:568)\r\n\tat io.cucumber.java.Invoker.doInvoke(Invoker.java:66)\r\n\tat io.cucumber.java.Invoker.invoke(Invoker.java:24)\r\n\tat io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)\r\n\tat io.cucumber.java.JavaHookDefinition.execute(JavaHookDefinition.java:59)\r\n\tat io.cucumber.core.runner.CoreHookDefinition.execute(CoreHookDefinition.java:46)\r\n\tat io.cucumber.core.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:21)\r\n\tat io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)\r\n\tat io.cucumber.core.runner.TestStep.executeStep(TestStep.java:92)\r\n\tat io.cucumber.core.runner.TestStep.run(TestStep.java:64)\r\n\tat io.cucumber.core.runner.TestCase.run(TestCase.java:98)\r\n\tat io.cucumber.core.runner.Runner.runPickle(Runner.java:73)\r\n\tat io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:151)\r\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:135)\r\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:27)\r\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\r\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\r\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\r\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:200)\r\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:90)\r\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\r\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\r\n\tat io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:235)\r\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\r\n\tat org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:93)\r\n\tat org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:530)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:758)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:453)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:211)\r\n",
-              "duration": 82654500,
-              "status": "failed"
-            },
-            "match": {
-              "location": "automacao.steps.Hooks.geraMassaDeDadosComSaldo()"
-            }
-          },
-          {
-            "result": {
-              "duration": 2394439000,
+              "duration": 7472097100,
               "status": "passed"
             },
             "match": {
-              "location": "automacao.steps.Hooks.setUp()"
+              "location": "automacao.steps.Hooks.setUpI()"
             }
           }
         ],
@@ -187,7 +166,7 @@
         "after": [
           {
             "result": {
-              "duration": 319309000,
+              "duration": 459231200,
               "status": "passed"
             },
             "match": {
@@ -200,8 +179,8 @@
         "steps": [
           {
             "result": {
-              "duration": 1002500,
-              "status": "skipped"
+              "duration": 669416900,
+              "status": "passed"
             },
             "line": 23,
             "name": "que eu estou na página de transferência",
@@ -212,7 +191,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 378851900,
+              "status": "passed"
             },
             "line": 24,
             "name": "inserir o número da conta",
@@ -223,7 +203,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 149881400,
+              "status": "passed"
             },
             "line": 25,
             "name": "inserir o campo descrição com \"Pagamento\"",
@@ -240,7 +221,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 127994900,
+              "status": "passed"
             },
             "line": 26,
             "name": "inserir o valor da transferência com \"10000\"",
@@ -257,7 +239,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 121002100,
+              "status": "passed"
             },
             "line": 27,
             "name": "clicar no botão Tranferir agora",
@@ -268,7 +251,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 585026400,
+              "status": "passed"
             },
             "line": 28,
             "name": "eu devo ver a mensagem \"Você não tem saldo suficiente para essa transação\"",
@@ -281,44 +265,31 @@
               ],
               "location": "automacao.steps.TransferenciaSteps.eu_devo_ver_a_mensagem_de_erro(java.lang.String)"
             },
-            "keyword": "Então "
+            "keyword": "Entao "
           }
         ],
         "tags": [
           {
-            "name": "@I"
-          },
-          {
             "name": "@Transferencia"
           },
           {
-            "name": "@MassaComSaldo"
+            "name": "@CT002_TransferenciaSaldoInsuficiente"
           },
           {
-            "name": "@CT002_TransferenciaSaldoInsuficiente"
+            "name": "@MassaComSaldo"
           }
         ]
       },
       {
-        "start_timestamp": "2024-12-14T18:00:41.531Z",
+        "start_timestamp": "2024-12-17T20:39:08.570Z",
         "before": [
           {
             "result": {
-              "error_message": "java.lang.RuntimeException: Erro ao cadastrar usuário: Session ID is null. Using WebDriver after calling quit()?\nBuild info: version: \u00274.14.0\u0027, revision: \u0027e5a96349ce\u0027\nSystem info: os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002717.0.10\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [null, findElement {using\u003dxpath, value\u003d//*[@id\u003d\"__next\"]/div/div[2]/div/div[1]/form/div[3]/button[2]}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.140, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\\Users\\joaov\\AppData\\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61978}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61978/devtoo..., se:cdpVersion: 131.0.6778.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\r\n\tat automacao.utils.MassaDeDados.cadastrar(MassaDeDados.java:53)\r\n\tat automacao.steps.Hooks.geraMassaDeDadosComSaldo(Hooks.java:43)\r\nCaused by: org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?\nBuild info: version: \u00274.14.0\u0027, revision: \u0027e5a96349ce\u0027\nSystem info: os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002717.0.10\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [null, findElement {using\u003dxpath, value\u003d//*[@id\u003d\"__next\"]/div/div[2]/div/div[1]/form/div[3]/button[2]}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.140, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\\Users\\joaov\\AppData\\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61978}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61978/devtoo..., se:cdpVersion: 131.0.6778.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:152)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)\r\n\tat org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)\r\n\tat org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)\r\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)\r\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)\r\n\tat jdk.proxy2/jdk.proxy2.$Proxy22.isDisplayed(Unknown Source)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)\r\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:205)\r\n\tat automacao.utils.PageUtils.clicar(PageUtils.java:31)\r\n\tat automacao.pages.CadastroPage.clickRegistrar(CadastroPage.java:90)\r\n\tat automacao.utils.MassaDeDados.cadastrar(MassaDeDados.java:38)\r\n\tat automacao.steps.Hooks.geraMassaDeDadosComSaldo(Hooks.java:43)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:568)\r\n\tat io.cucumber.java.Invoker.doInvoke(Invoker.java:66)\r\n\tat io.cucumber.java.Invoker.invoke(Invoker.java:24)\r\n\tat io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)\r\n\tat io.cucumber.java.JavaHookDefinition.execute(JavaHookDefinition.java:59)\r\n\tat io.cucumber.core.runner.CoreHookDefinition.execute(CoreHookDefinition.java:46)\r\n\tat io.cucumber.core.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:21)\r\n\tat io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)\r\n\tat io.cucumber.core.runner.TestStep.executeStep(TestStep.java:92)\r\n\tat io.cucumber.core.runner.TestStep.run(TestStep.java:64)\r\n\tat io.cucumber.core.runner.TestCase.run(TestCase.java:98)\r\n\tat io.cucumber.core.runner.Runner.runPickle(Runner.java:73)\r\n\tat io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:151)\r\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:135)\r\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:27)\r\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\r\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\r\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\r\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:200)\r\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:90)\r\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\r\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\r\n\tat io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:235)\r\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\r\n\tat org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:93)\r\n\tat org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:530)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:758)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:453)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:211)\r\n",
-              "duration": 279001300,
-              "status": "failed"
-            },
-            "match": {
-              "location": "automacao.steps.Hooks.geraMassaDeDadosComSaldo()"
-            }
-          },
-          {
-            "result": {
-              "duration": 2896521600,
+              "duration": 6360025700,
               "status": "passed"
             },
             "match": {
-              "location": "automacao.steps.Hooks.setUp()"
+              "location": "automacao.steps.Hooks.setUpI()"
             }
           }
         ],
@@ -329,7 +300,7 @@
         "after": [
           {
             "result": {
-              "duration": 440036500,
+              "duration": 332971300,
               "status": "passed"
             },
             "match": {
@@ -342,7 +313,8 @@
         "steps": [
           {
             "result": {
-              "status": "skipped"
+              "duration": 773002800,
+              "status": "passed"
             },
             "line": 37,
             "name": "que eu estou na página de transferência",
@@ -353,7 +325,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 395000300,
+              "status": "passed"
             },
             "line": 38,
             "name": "inserir o número da conta",
@@ -364,7 +337,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 229041900,
+              "status": "passed"
             },
             "line": 39,
             "name": "inserir o campo descrição com \"Pagamento\"",
@@ -381,8 +355,8 @@
           },
           {
             "result": {
-              "duration": 1987600,
-              "status": "skipped"
+              "duration": 191001000,
+              "status": "passed"
             },
             "line": 40,
             "name": "inserir o valor da transferência com \"-50\"",
@@ -399,7 +373,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 164998800,
+              "status": "passed"
             },
             "line": 41,
             "name": "clicar no botão Tranferir agora",
@@ -410,7 +385,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 575100300,
+              "status": "passed"
             },
             "line": 42,
             "name": "eu devo ver a mensagem \"Valor da transferência não pode ser 0 ou negativo\"",
@@ -423,44 +399,31 @@
               ],
               "location": "automacao.steps.TransferenciaSteps.eu_devo_ver_a_mensagem_de_erro(java.lang.String)"
             },
-            "keyword": "Então "
+            "keyword": "Entao "
           }
         ],
         "tags": [
           {
-            "name": "@I"
-          },
-          {
             "name": "@Transferencia"
           },
           {
-            "name": "@MassaComSaldo"
+            "name": "@CT003_TransferenciaValorInvalido"
           },
           {
-            "name": "@CT003_TransferenciaValorInvalido"
+            "name": "@MassaComSaldo"
           }
         ]
       },
       {
-        "start_timestamp": "2024-12-14T18:00:45.202Z",
+        "start_timestamp": "2024-12-17T20:39:17.615Z",
         "before": [
           {
             "result": {
-              "error_message": "java.lang.RuntimeException: Erro ao cadastrar usuário: Session ID is null. Using WebDriver after calling quit()?\nBuild info: version: \u00274.14.0\u0027, revision: \u0027e5a96349ce\u0027\nSystem info: os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002717.0.10\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [null, findElement {using\u003dxpath, value\u003d//*[@id\u003d\"__next\"]/div/div[2]/div/div[1]/form/div[3]/button[2]}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.140, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\\Users\\joaov\\AppData\\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61999}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61999/devtoo..., se:cdpVersion: 131.0.6778.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\r\n\tat automacao.utils.MassaDeDados.cadastrar(MassaDeDados.java:53)\r\n\tat automacao.steps.Hooks.geraMassaDeDadosComSaldo(Hooks.java:43)\r\nCaused by: org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?\nBuild info: version: \u00274.14.0\u0027, revision: \u0027e5a96349ce\u0027\nSystem info: os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002717.0.10\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [null, findElement {using\u003dxpath, value\u003d//*[@id\u003d\"__next\"]/div/div[2]/div/div[1]/form/div[3]/button[2]}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.140, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\\Users\\joaov\\AppData\\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61999}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61999/devtoo..., se:cdpVersion: 131.0.6778.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:152)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)\r\n\tat org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)\r\n\tat org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)\r\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)\r\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)\r\n\tat jdk.proxy2/jdk.proxy2.$Proxy22.isDisplayed(Unknown Source)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)\r\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:205)\r\n\tat automacao.utils.PageUtils.clicar(PageUtils.java:31)\r\n\tat automacao.pages.CadastroPage.clickRegistrar(CadastroPage.java:90)\r\n\tat automacao.utils.MassaDeDados.cadastrar(MassaDeDados.java:38)\r\n\tat automacao.steps.Hooks.geraMassaDeDadosComSaldo(Hooks.java:43)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:568)\r\n\tat io.cucumber.java.Invoker.doInvoke(Invoker.java:66)\r\n\tat io.cucumber.java.Invoker.invoke(Invoker.java:24)\r\n\tat io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)\r\n\tat io.cucumber.java.JavaHookDefinition.execute(JavaHookDefinition.java:59)\r\n\tat io.cucumber.core.runner.CoreHookDefinition.execute(CoreHookDefinition.java:46)\r\n\tat io.cucumber.core.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:21)\r\n\tat io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)\r\n\tat io.cucumber.core.runner.TestStep.executeStep(TestStep.java:92)\r\n\tat io.cucumber.core.runner.TestStep.run(TestStep.java:64)\r\n\tat io.cucumber.core.runner.TestCase.run(TestCase.java:98)\r\n\tat io.cucumber.core.runner.Runner.runPickle(Runner.java:73)\r\n\tat io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:151)\r\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:135)\r\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:27)\r\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\r\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\r\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\r\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:200)\r\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:90)\r\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\r\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\r\n\tat io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:235)\r\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\r\n\tat org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:93)\r\n\tat org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:530)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:758)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:453)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:211)\r\n",
-              "duration": 67997700,
-              "status": "failed"
-            },
-            "match": {
-              "location": "automacao.steps.Hooks.geraMassaDeDadosComSaldo()"
-            }
-          },
-          {
-            "result": {
-              "duration": 2054900100,
+              "duration": 6383092800,
               "status": "passed"
             },
             "match": {
-              "location": "automacao.steps.Hooks.setUp()"
+              "location": "automacao.steps.Hooks.setUpI()"
             }
           }
         ],
@@ -471,7 +434,7 @@
         "after": [
           {
             "result": {
-              "duration": 487944300,
+              "duration": 444819600,
               "status": "passed"
             },
             "match": {
@@ -484,7 +447,8 @@
         "steps": [
           {
             "result": {
-              "status": "skipped"
+              "duration": 668209200,
+              "status": "passed"
             },
             "line": 51,
             "name": "que eu estou na página de transferência",
@@ -495,7 +459,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 333001700,
+              "status": "passed"
             },
             "line": 52,
             "name": "inserir o número da conta",
@@ -506,7 +471,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 158000200,
+              "status": "passed"
             },
             "line": 53,
             "name": "inserir o campo descrição com \"Pagamento\"",
@@ -523,7 +489,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 135000400,
+              "status": "passed"
             },
             "line": 54,
             "name": "inserir o valor da transferência com \"100\"",
@@ -540,8 +507,8 @@
           },
           {
             "result": {
-              "duration": 343100,
-              "status": "skipped"
+              "duration": 138997400,
+              "status": "passed"
             },
             "line": 55,
             "name": "clicar no botão Tranferir agora",
@@ -552,7 +519,9 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "error_message": "org.junit.ComparisonFailure: expected:\u003cTransfer[ê]ncia realizada com s...\u003e but was:\u003cTransfer[e]ncia realizada com s...\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:117)\r\n\tat org.junit.Assert.assertEquals(Assert.java:146)\r\n\tat automacao.steps.TransferenciaSteps.eu_devo_ver_a_mensagem_de_erro(TransferenciaSteps.java:69)\r\n\tat ✽.eu devo ver a mensagem \"Transferência realizada com sucesso\"(file:///C:/Users/joaov/eclipse-workspace/bugBank/src/test/resources/features/transferencia.feature:56)\r\n",
+              "duration": 577044200,
+              "status": "failed"
             },
             "line": 56,
             "name": "eu devo ver a mensagem \"Transferência realizada com sucesso\"",
@@ -565,44 +534,31 @@
               ],
               "location": "automacao.steps.TransferenciaSteps.eu_devo_ver_a_mensagem_de_erro(java.lang.String)"
             },
-            "keyword": "Então "
+            "keyword": "Entao "
           }
         ],
         "tags": [
           {
-            "name": "@I"
-          },
-          {
             "name": "@Transferencia"
           },
           {
-            "name": "@MassaComSaldo"
+            "name": "@CT004_ModalDeTransferenciaRealizadaComSucesso"
           },
           {
-            "name": "@CT004_ModalDeTransferenciaRealizadaComSucesso"
+            "name": "@MassaComSaldo"
           }
         ]
       },
       {
-        "start_timestamp": "2024-12-14T18:00:47.935Z",
+        "start_timestamp": "2024-12-17T20:39:26.521Z",
         "before": [
           {
             "result": {
-              "error_message": "java.lang.RuntimeException: Erro ao cadastrar usuário: Session ID is null. Using WebDriver after calling quit()?\nBuild info: version: \u00274.14.0\u0027, revision: \u0027e5a96349ce\u0027\nSystem info: os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002717.0.10\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [null, findElement {using\u003dxpath, value\u003d//*[@id\u003d\"__next\"]/div/div[2]/div/div[1]/form/div[3]/button[2]}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.140, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\\Users\\joaov\\AppData\\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62018}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62018/devtoo..., se:cdpVersion: 131.0.6778.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\r\n\tat automacao.utils.MassaDeDados.cadastrar(MassaDeDados.java:53)\r\n\tat automacao.steps.Hooks.geraMassaDeDadosComSaldo(Hooks.java:43)\r\nCaused by: org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?\nBuild info: version: \u00274.14.0\u0027, revision: \u0027e5a96349ce\u0027\nSystem info: os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002717.0.10\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [null, findElement {using\u003dxpath, value\u003d//*[@id\u003d\"__next\"]/div/div[2]/div/div[1]/form/div[3]/button[2]}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.140, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\\Users\\joaov\\AppData\\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62018}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62018/devtoo..., se:cdpVersion: 131.0.6778.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:152)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)\r\n\tat org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)\r\n\tat org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)\r\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)\r\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)\r\n\tat jdk.proxy2/jdk.proxy2.$Proxy22.isDisplayed(Unknown Source)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)\r\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:205)\r\n\tat automacao.utils.PageUtils.clicar(PageUtils.java:31)\r\n\tat automacao.pages.CadastroPage.clickRegistrar(CadastroPage.java:90)\r\n\tat automacao.utils.MassaDeDados.cadastrar(MassaDeDados.java:38)\r\n\tat automacao.steps.Hooks.geraMassaDeDadosComSaldo(Hooks.java:43)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:568)\r\n\tat io.cucumber.java.Invoker.doInvoke(Invoker.java:66)\r\n\tat io.cucumber.java.Invoker.invoke(Invoker.java:24)\r\n\tat io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)\r\n\tat io.cucumber.java.JavaHookDefinition.execute(JavaHookDefinition.java:59)\r\n\tat io.cucumber.core.runner.CoreHookDefinition.execute(CoreHookDefinition.java:46)\r\n\tat io.cucumber.core.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:21)\r\n\tat io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)\r\n\tat io.cucumber.core.runner.TestStep.executeStep(TestStep.java:92)\r\n\tat io.cucumber.core.runner.TestStep.run(TestStep.java:64)\r\n\tat io.cucumber.core.runner.TestCase.run(TestCase.java:98)\r\n\tat io.cucumber.core.runner.Runner.runPickle(Runner.java:73)\r\n\tat io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:151)\r\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:135)\r\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:27)\r\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\r\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\r\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\r\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:200)\r\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:90)\r\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\r\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\r\n\tat io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:235)\r\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\r\n\tat org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:93)\r\n\tat org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:530)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:758)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:453)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:211)\r\n",
-              "duration": 99517600,
-              "status": "failed"
-            },
-            "match": {
-              "location": "automacao.steps.Hooks.geraMassaDeDadosComSaldo()"
-            }
-          },
-          {
-            "result": {
-              "duration": 1897401000,
+              "duration": 6130299000,
               "status": "passed"
             },
             "match": {
-              "location": "automacao.steps.Hooks.setUp()"
+              "location": "automacao.steps.Hooks.setUpI()"
             }
           }
         ],
@@ -613,7 +569,7 @@
         "after": [
           {
             "result": {
-              "duration": 304016500,
+              "duration": 464127500,
               "status": "passed"
             },
             "match": {
@@ -626,7 +582,8 @@
         "steps": [
           {
             "result": {
-              "status": "skipped"
+              "duration": 765163000,
+              "status": "passed"
             },
             "line": 65,
             "name": "que eu estou na página de transferência",
@@ -637,8 +594,8 @@
           },
           {
             "result": {
-              "duration": 1000700,
-              "status": "skipped"
+              "duration": 379266100,
+              "status": "passed"
             },
             "line": 66,
             "name": "inserir o número da conta",
@@ -649,8 +606,8 @@
           },
           {
             "result": {
-              "duration": 999700,
-              "status": "skipped"
+              "duration": 143000700,
+              "status": "passed"
             },
             "line": 67,
             "name": "inserir o campo descrição com \"Pagamento\"",
@@ -667,7 +624,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 145000000,
+              "status": "passed"
             },
             "line": 68,
             "name": "inserir o valor da transferência com \"100\"",
@@ -684,7 +642,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 122998700,
+              "status": "passed"
             },
             "line": 69,
             "name": "clicar no botão Tranferir agora",
@@ -695,7 +654,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 844720600,
+              "status": "passed"
             },
             "line": 70,
             "name": "eu devo ter dedução no saldo de \"100\"",
@@ -708,44 +668,31 @@
               ],
               "location": "automacao.steps.TransferenciaSteps.eu_devo_ter_dedução_no_saldo_de(java.lang.String)"
             },
-            "keyword": "Então "
+            "keyword": "Entao "
           }
         ],
         "tags": [
           {
-            "name": "@I"
-          },
-          {
             "name": "@Transferencia"
           },
           {
-            "name": "@MassaComSaldo"
+            "name": "@CT005_TransferenciaRealizadaComSucessoComReducaoDeSaldo"
           },
           {
-            "name": "@CT005_TransferenciaRealizadaComSucessoComReducaoDeSaldo"
+            "name": "@MassaComSaldo"
           }
         ]
       },
       {
-        "start_timestamp": "2024-12-14T18:00:50.297Z",
+        "start_timestamp": "2024-12-17T20:39:35.553Z",
         "before": [
           {
             "result": {
-              "error_message": "java.lang.RuntimeException: Erro ao cadastrar usuário: Session ID is null. Using WebDriver after calling quit()?\nBuild info: version: \u00274.14.0\u0027, revision: \u0027e5a96349ce\u0027\nSystem info: os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002717.0.10\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [null, findElement {using\u003dxpath, value\u003d//*[@id\u003d\"__next\"]/div/div[2]/div/div[1]/form/div[3]/button[2]}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.140, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\\Users\\joaov\\AppData\\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62035}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62035/devtoo..., se:cdpVersion: 131.0.6778.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\r\n\tat automacao.utils.MassaDeDados.cadastrar(MassaDeDados.java:53)\r\n\tat automacao.steps.Hooks.geraMassaDeDadosComSaldo(Hooks.java:43)\r\nCaused by: org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?\nBuild info: version: \u00274.14.0\u0027, revision: \u0027e5a96349ce\u0027\nSystem info: os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002717.0.10\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [null, findElement {using\u003dxpath, value\u003d//*[@id\u003d\"__next\"]/div/div[2]/div/div[1]/form/div[3]/button[2]}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.140, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\\Users\\joaov\\AppData\\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62035}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62035/devtoo..., se:cdpVersion: 131.0.6778.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:152)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)\r\n\tat org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)\r\n\tat org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)\r\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)\r\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)\r\n\tat jdk.proxy2/jdk.proxy2.$Proxy22.isDisplayed(Unknown Source)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)\r\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:205)\r\n\tat automacao.utils.PageUtils.clicar(PageUtils.java:31)\r\n\tat automacao.pages.CadastroPage.clickRegistrar(CadastroPage.java:90)\r\n\tat automacao.utils.MassaDeDados.cadastrar(MassaDeDados.java:38)\r\n\tat automacao.steps.Hooks.geraMassaDeDadosComSaldo(Hooks.java:43)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:568)\r\n\tat io.cucumber.java.Invoker.doInvoke(Invoker.java:66)\r\n\tat io.cucumber.java.Invoker.invoke(Invoker.java:24)\r\n\tat io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)\r\n\tat io.cucumber.java.JavaHookDefinition.execute(JavaHookDefinition.java:59)\r\n\tat io.cucumber.core.runner.CoreHookDefinition.execute(CoreHookDefinition.java:46)\r\n\tat io.cucumber.core.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:21)\r\n\tat io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)\r\n\tat io.cucumber.core.runner.TestStep.executeStep(TestStep.java:92)\r\n\tat io.cucumber.core.runner.TestStep.run(TestStep.java:64)\r\n\tat io.cucumber.core.runner.TestCase.run(TestCase.java:98)\r\n\tat io.cucumber.core.runner.Runner.runPickle(Runner.java:73)\r\n\tat io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:151)\r\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:135)\r\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:27)\r\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\r\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\r\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\r\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:200)\r\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:90)\r\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\r\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\r\n\tat io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:235)\r\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\r\n\tat org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:93)\r\n\tat org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:530)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:758)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:453)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:211)\r\n",
-              "duration": 78912500,
-              "status": "failed"
-            },
-            "match": {
-              "location": "automacao.steps.Hooks.geraMassaDeDadosComSaldo()"
-            }
-          },
-          {
-            "result": {
-              "duration": 1800017900,
+              "duration": 6255272300,
               "status": "passed"
             },
             "match": {
-              "location": "automacao.steps.Hooks.setUp()"
+              "location": "automacao.steps.Hooks.setUpI()"
             }
           }
         ],
@@ -756,7 +703,7 @@
         "after": [
           {
             "result": {
-              "duration": 695366300,
+              "duration": 323002000,
               "status": "passed"
             },
             "match": {
@@ -769,7 +716,8 @@
         "steps": [
           {
             "result": {
-              "status": "skipped"
+              "duration": 666776500,
+              "status": "passed"
             },
             "line": 79,
             "name": "que eu estou na página de transferência",
@@ -780,7 +728,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 359214800,
+              "status": "passed"
             },
             "line": 80,
             "name": "inserir o número da conta",
@@ -791,7 +740,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 157998800,
+              "status": "passed"
             },
             "line": 81,
             "name": "inserir o campo descrição com \"Pagamento\"",
@@ -808,7 +758,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 126000400,
+              "status": "passed"
             },
             "line": 82,
             "name": "inserir o valor da transferência com \"100\"",
@@ -825,7 +776,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 150999000,
+              "status": "passed"
             },
             "line": 83,
             "name": "clicar no botão Tranferir agora",
@@ -836,7 +788,9 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "error_message": "java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:87)\r\n\tat org.junit.Assert.assertTrue(Assert.java:42)\r\n\tat org.junit.Assert.assertTrue(Assert.java:53)\r\n\tat automacao.steps.TransferenciaSteps.eu_devo_ser_redirecionado_para_a_página_de_extrato(TransferenciaSteps.java:86)\r\n\tat ✽.eu devo ser redirecionado para a página de extrato \"/bank-statement\"(file:///C:/Users/joaov/eclipse-workspace/bugBank/src/test/resources/features/transferencia.feature:84)\r\n",
+              "duration": 10953221800,
+              "status": "failed"
             },
             "line": 84,
             "name": "eu devo ser redirecionado para a página de extrato \"/bank-statement\"",
@@ -849,44 +803,31 @@
               ],
               "location": "automacao.steps.TransferenciaSteps.eu_devo_ser_redirecionado_para_a_página_de_extrato(java.lang.String)"
             },
-            "keyword": "Então "
+            "keyword": "Entao "
           }
         ],
         "tags": [
           {
-            "name": "@I"
-          },
-          {
             "name": "@Transferencia"
           },
           {
-            "name": "@MassaComSaldo"
+            "name": "@CT006_RedirecionamentoAposTransferenciaRealizadaComSucesso"
           },
           {
-            "name": "@CT006_RedirecionamentoAposTransferenciaRealizadaComSucesso"
+            "name": "@MassaComSaldo"
           }
         ]
       },
       {
-        "start_timestamp": "2024-12-14T18:00:52.901Z",
+        "start_timestamp": "2024-12-17T20:39:54.573Z",
         "before": [
           {
             "result": {
-              "error_message": "java.lang.RuntimeException: Erro ao cadastrar usuário: Session ID is null. Using WebDriver after calling quit()?\nBuild info: version: \u00274.14.0\u0027, revision: \u0027e5a96349ce\u0027\nSystem info: os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002717.0.10\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [null, findElement {using\u003dxpath, value\u003d//*[@id\u003d\"__next\"]/div/div[2]/div/div[1]/form/div[3]/button[2]}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.140, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\\Users\\joaov\\AppData\\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62051}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62051/devtoo..., se:cdpVersion: 131.0.6778.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\r\n\tat automacao.utils.MassaDeDados.cadastrar(MassaDeDados.java:53)\r\n\tat automacao.steps.Hooks.geraMassaDeDadosComSaldo(Hooks.java:43)\r\nCaused by: org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?\nBuild info: version: \u00274.14.0\u0027, revision: \u0027e5a96349ce\u0027\nSystem info: os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002717.0.10\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [null, findElement {using\u003dxpath, value\u003d//*[@id\u003d\"__next\"]/div/div[2]/div/div[1]/form/div[3]/button[2]}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.140, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\\Users\\joaov\\AppData\\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62051}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62051/devtoo..., se:cdpVersion: 131.0.6778.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:152)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)\r\n\tat org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)\r\n\tat org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)\r\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)\r\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)\r\n\tat jdk.proxy2/jdk.proxy2.$Proxy22.isDisplayed(Unknown Source)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)\r\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:205)\r\n\tat automacao.utils.PageUtils.clicar(PageUtils.java:31)\r\n\tat automacao.pages.CadastroPage.clickRegistrar(CadastroPage.java:90)\r\n\tat automacao.utils.MassaDeDados.cadastrar(MassaDeDados.java:38)\r\n\tat automacao.steps.Hooks.geraMassaDeDadosComSaldo(Hooks.java:43)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:568)\r\n\tat io.cucumber.java.Invoker.doInvoke(Invoker.java:66)\r\n\tat io.cucumber.java.Invoker.invoke(Invoker.java:24)\r\n\tat io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)\r\n\tat io.cucumber.java.JavaHookDefinition.execute(JavaHookDefinition.java:59)\r\n\tat io.cucumber.core.runner.CoreHookDefinition.execute(CoreHookDefinition.java:46)\r\n\tat io.cucumber.core.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:21)\r\n\tat io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)\r\n\tat io.cucumber.core.runner.TestStep.executeStep(TestStep.java:92)\r\n\tat io.cucumber.core.runner.TestStep.run(TestStep.java:64)\r\n\tat io.cucumber.core.runner.TestCase.run(TestCase.java:98)\r\n\tat io.cucumber.core.runner.Runner.runPickle(Runner.java:73)\r\n\tat io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:151)\r\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:135)\r\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:27)\r\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\r\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\r\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\r\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:200)\r\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:90)\r\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\r\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\r\n\tat io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:235)\r\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\r\n\tat org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:93)\r\n\tat org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:530)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:758)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:453)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:211)\r\n",
-              "duration": 83010400,
-              "status": "failed"
-            },
-            "match": {
-              "location": "automacao.steps.Hooks.geraMassaDeDadosComSaldo()"
-            }
-          },
-          {
-            "result": {
-              "duration": 1803704100,
+              "duration": 5828900600,
               "status": "passed"
             },
             "match": {
-              "location": "automacao.steps.Hooks.setUp()"
+              "location": "automacao.steps.Hooks.setUpI()"
             }
           }
         ],
@@ -897,7 +838,7 @@
         "after": [
           {
             "result": {
-              "duration": 463965300,
+              "duration": 287509500,
               "status": "passed"
             },
             "match": {
@@ -910,8 +851,8 @@
         "steps": [
           {
             "result": {
-              "duration": 1002500,
-              "status": "skipped"
+              "duration": 807353700,
+              "status": "passed"
             },
             "line": 93,
             "name": "que eu estou na página de transferência",
@@ -922,7 +863,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 309999900,
+              "status": "passed"
             },
             "line": 94,
             "name": "inserir o número da conta",
@@ -933,7 +875,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 133000400,
+              "status": "passed"
             },
             "line": 95,
             "name": "inserir o valor da transferência com \"100\"",
@@ -950,7 +893,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 145996700,
+              "status": "passed"
             },
             "line": 96,
             "name": "clicar no botão Tranferir agora",
@@ -961,7 +905,9 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "error_message": "org.junit.ComparisonFailure: expected:\u003c[Campo descrição é obrigatóri]o\u003e but was:\u003c[Transferencia realizada com sucess]o\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:117)\r\n\tat org.junit.Assert.assertEquals(Assert.java:146)\r\n\tat automacao.steps.TransferenciaSteps.eu_devo_ver_a_mensagem_de_erro(TransferenciaSteps.java:69)\r\n\tat ✽.eu devo ver a mensagem \"Campo descrição é obrigatório\"(file:///C:/Users/joaov/eclipse-workspace/bugBank/src/test/resources/features/transferencia.feature:97)\r\n",
+              "duration": 572515800,
+              "status": "failed"
             },
             "line": 97,
             "name": "eu devo ver a mensagem \"Campo descrição é obrigatório\"",
@@ -974,21 +920,306 @@
               ],
               "location": "automacao.steps.TransferenciaSteps.eu_devo_ver_a_mensagem_de_erro(java.lang.String)"
             },
-            "keyword": "Então "
+            "keyword": "Entao "
           }
         ],
         "tags": [
           {
-            "name": "@I"
+            "name": "@Transferencia"
           },
+          {
+            "name": "@CT007_CampoDescricaoObrigatorio"
+          },
+          {
+            "name": "@MassaComSaldo"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-12-17T20:40:02.692Z",
+        "before": [
+          {
+            "result": {
+              "duration": 6538090200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "automacao.steps.Hooks.setUpI()"
+            }
+          }
+        ],
+        "line": 115,
+        "name": "Transferência realizada com sucesso com crédito na conta",
+        "description": "",
+        "id": "testar-tranferencia;transferência-realizada-com-sucesso-com-crédito-na-conta;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 385979300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "automacao.steps.Hooks.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Esquema do Cenário",
+        "steps": [
+          {
+            "result": {
+              "duration": 759207900,
+              "status": "passed"
+            },
+            "line": 106,
+            "name": "que eu estou na página de transferência",
+            "match": {
+              "location": "automacao.steps.TransferenciaSteps.que_eu_estou_na_página_de_transferência()"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 318901800,
+              "status": "passed"
+            },
+            "line": 107,
+            "name": "inserir o número da conta",
+            "match": {
+              "location": "automacao.steps.TransferenciaSteps.inserir_o_número_da_conta()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 158998300,
+              "status": "passed"
+            },
+            "line": 108,
+            "name": "inserir o campo descrição com \"Pagamento\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Pagamento\"",
+                  "offset": 30
+                }
+              ],
+              "location": "automacao.steps.TransferenciaSteps.inserir_o_campo_descrição_com(java.lang.String)"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 125998900,
+              "status": "passed"
+            },
+            "line": 109,
+            "name": "inserir o valor da transferência com \"100\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"100\"",
+                  "offset": 37
+                }
+              ],
+              "location": "automacao.steps.TransferenciaSteps.inserir_o_valor_da_transferência_com(java.lang.String)"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 126000200,
+              "status": "passed"
+            },
+            "line": 110,
+            "name": "clicar no botão Tranferir agora",
+            "match": {
+              "location": "automacao.steps.TransferenciaSteps.clicar_no_botão_tranferir_agora()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 1521289400,
+              "status": "passed"
+            },
+            "line": 111,
+            "name": "a conta destino deve receber \"100\" com a descrição \"Pagamento\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"100\"",
+                  "offset": 29
+                },
+                {
+                  "val": "\"Pagamento\"",
+                  "offset": 51
+                }
+              ],
+              "location": "automacao.steps.TransferenciaSteps.a_conta_destino_deve_receber_com_a_descrição(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Entao "
+          }
+        ],
+        "tags": [
           {
             "name": "@Transferencia"
           },
           {
-            "name": "@MassaComSaldo"
+            "name": "@CT008_TransferenciaRealizadaComSucessoComCreditoNaConta"
           },
           {
-            "name": "@CT007_CampoDescricaoObrigatorio"
+            "name": "@MassaComSaldo"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-12-17T20:40:12.643Z",
+        "before": [
+          {
+            "result": {
+              "duration": 6158485600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "automacao.steps.Hooks.setUpI()"
+            }
+          }
+        ],
+        "line": 125,
+        "name": "Validação de caracteres aceitos no número da conta",
+        "description": "",
+        "id": "testar-tranferencia;validação-de-caracteres-aceitos-no-número-da-conta;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 370998800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "automacao.steps.Hooks.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Esquema do Cenário",
+        "steps": [
+          {
+            "result": {
+              "duration": 725803300,
+              "status": "passed"
+            },
+            "line": 120,
+            "name": "que eu estou na página de transferência",
+            "match": {
+              "location": "automacao.steps.TransferenciaSteps.que_eu_estou_na_página_de_transferência()"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: O campo número da conta está aceitando caracteres fora do padrão especificado: ^[0-9]+$. O campo deve aceitar apenas caracteres que correspondam ao regex.\r\n\tat org.junit.Assert.fail(Assert.java:89)\r\n\tat org.junit.Assert.assertTrue(Assert.java:42)\r\n\tat automacao.steps.TransferenciaSteps.validar_que_o_campo_numero_da_conta_aceita_apenas_o_padrao(TransferenciaSteps.java:133)\r\n\tat ✽.validar que o campo número da conta aceita apenas o padrão \"^[0-9]+$\"(file:///C:/Users/joaov/eclipse-workspace/bugBank/src/test/resources/features/transferencia.feature:121)\r\n",
+              "duration": 1472511600,
+              "status": "failed"
+            },
+            "line": 121,
+            "name": "validar que o campo número da conta aceita apenas o padrão \"^[0-9]+$\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"^[0-9]+$\"",
+                  "offset": 59
+                }
+              ],
+              "location": "automacao.steps.TransferenciaSteps.validar_que_o_campo_numero_da_conta_aceita_apenas_o_padrao(java.lang.String)"
+            },
+            "keyword": "Entao "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Transferencia"
+          },
+          {
+            "name": "@CT009_ValidacaoCaracteresNumeroConta"
+          },
+          {
+            "name": "@MassaComSaldo"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-12-17T20:40:21.392Z",
+        "before": [
+          {
+            "result": {
+              "duration": 6043135200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "automacao.steps.Hooks.setUpI()"
+            }
+          }
+        ],
+        "line": 134,
+        "name": "Validação de caracteres aceitos no número da conta",
+        "description": "",
+        "id": "testar-tranferencia;validação-de-caracteres-aceitos-no-número-da-conta;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 304001700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "automacao.steps.Hooks.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Esquema do Cenário",
+        "steps": [
+          {
+            "result": {
+              "duration": 690508400,
+              "status": "passed"
+            },
+            "line": 129,
+            "name": "que eu estou na página de transferência",
+            "match": {
+              "location": "automacao.steps.TransferenciaSteps.que_eu_estou_na_página_de_transferência()"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: O campo dígito da conta está aceitando caracteres fora do padrão especificado: ^[0-9]+$. O campo deve aceitar apenas caracteres que correspondam ao regex.\r\n\tat org.junit.Assert.fail(Assert.java:89)\r\n\tat org.junit.Assert.assertTrue(Assert.java:42)\r\n\tat automacao.steps.TransferenciaSteps.validar_que_o_campo_digito_aceita_apenas_o_padrao(TransferenciaSteps.java:142)\r\n\tat ✽.validar que o campo dígito aceita apenas o padrão \"^[0-9]+$\"(file:///C:/Users/joaov/eclipse-workspace/bugBank/src/test/resources/features/transferencia.feature:130)\r\n",
+              "duration": 1558545000,
+              "status": "failed"
+            },
+            "line": 130,
+            "name": "validar que o campo dígito aceita apenas o padrão \"^[0-9]+$\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"^[0-9]+$\"",
+                  "offset": 50
+                }
+              ],
+              "location": "automacao.steps.TransferenciaSteps.validar_que_o_campo_digito_aceita_apenas_o_padrao(java.lang.String)"
+            },
+            "keyword": "Entao "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Transferencia"
+          },
+          {
+            "name": "@CT009_ValidacaoCaracteresNumeroConta"
+          },
+          {
+            "name": "@MassaComSaldo"
           }
         ]
       }
@@ -1000,19 +1231,11 @@
     "uri": "file:src/test/resources/features/transferencia.feature",
     "tags": [
       {
-        "name": "@I",
-        "type": "Tag",
-        "location": {
-          "line": 3,
-          "column": 1
-        }
-      },
-      {
         "name": "@Transferencia",
         "type": "Tag",
         "location": {
           "line": 3,
-          "column": 4
+          "column": 1
         }
       }
     ]

@@ -55,6 +55,14 @@ public class TransferenciaPage {
     pageUtils.inserirElemento(accountNumber, numeroConta);
   }
 
+  public boolean caracteresAceitosNumeroConta(String regex) {
+    return StepsUtils.caracteresAceitos(regex, accountNumber);
+  }
+
+  public boolean caracteresAceitosDigitoConta(String regex) {
+    return StepsUtils.caracteresAceitos(regex, digit);
+  }
+
   public void inserirDigito(String numero) {
     String digitoConta = StepsUtils.extraiAccountNumber(numero, true);
     pageUtils.inserirElemento(digit, digitoConta);

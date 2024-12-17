@@ -25,6 +25,7 @@ public class TransferenciaSteps {
   public void que_eu_estou_na_página_de_transferência() {
     loginPage = Hooks.getLoginPage();
     homePage = Hooks.getHomePage();
+    extratoPage = Hooks.getExtratoPage();
     transferenciaPage = Hooks.getTransferenciaPage();
     massaDeDados = Hooks.getMassaDeDados();
 
@@ -92,13 +93,14 @@ public class TransferenciaSteps {
 
     String saldoActual = homePage.obterTextBalance();
     double saldoEsperadoDouble = 1000.00 - Integer.valueOf(valorDeducao);
-    String saldoExpected = String.format("%.2f", saldoEsperadoDouble).replace(".", ",");
+    String saldoExpected = String.format("%.2f", saldoEsperadoDouble)
+        .replace(".", ",");
 
     Assert.assertEquals(saldoExpected, saldoActual);
   }
 
   @Entao("a conta destino deve receber {string} com a descrição {string}")
-  public void a_conta_destino_deve_receber_com_a_descrição(String valorExpected, String descriptionExpected) {
+  public void a_conta_destino_deve_receber_com_a_descrição(String valor, String descriptionExpected) {
     Usuario usuario = massaDeDados.get(1);
 
     transferenciaPage.fecharModal();
@@ -110,8 +112,11 @@ public class TransferenciaSteps {
 
     homePage.clickExtrato();
 
-    String saldoActual = extratoPage.obterSaldoDisponivel();
+    String saldoActual = extratoPage.obterValorTransferencia();
     String descricaoActual = extratoPage.obterDescricaoTransferencia();
+
+    double valorDouble = Double.parseDouble(valor);
+    String valorExpected = String.format("%.2f", valorDouble).replace(".", ",");
 
     Assert.assertEquals(valorExpected, saldoActual);
     Assert.assertEquals(descriptionExpected, descricaoActual);
@@ -120,5 +125,23 @@ public class TransferenciaSteps {
   @Quando("inserir o valor da transferência {string}")
   public void inserir_o_valor_da_transferência(String valor) {
     transferenciaPage.inserirValorTransferencia(valor);
+  }
+
+  @Entao("validar que o campo número da conta aceita apenas o padrão {string}")
+  public void validar_que_o_campo_numero_da_conta_aceita_apenas_o_padrao(String regex) {
+    boolean resultado = transferenciaPage.caracteresAceitosNumeroConta(regex);
+    Assert.assertTrue(
+        "O campo número da conta está aceitando caracteres fora do padrão especificado: " + regex +
+            ". O campo deve aceitar apenas caracteres que correspondam ao regex.",
+        resultado);
+  }
+
+  @Entao("validar que o campo dígito aceita apenas o padrão {string}")
+  public void validar_que_o_campo_digito_aceita_apenas_o_padrao(String regex) {
+    boolean resultado = transferenciaPage.caracteresAceitosDigitoConta(regex);
+    Assert.assertTrue(
+        "O campo dígito da conta está aceitando caracteres fora do padrão especificado: " + regex +
+            ". O campo deve aceitar apenas caracteres que correspondam ao regex.",
+        resultado);
   }
 }

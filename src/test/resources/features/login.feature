@@ -1,6 +1,6 @@
 #language: pt
 #encoding: UTF-8
-@I @Login
+@Login
 Funcionalidade: testar login
 
   @CT001_ClicarApenasEmAcessar

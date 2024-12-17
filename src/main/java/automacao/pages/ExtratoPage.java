@@ -27,19 +27,31 @@ public class ExtratoPage {
   }
 
   @FindBy(xpath = "//*[@id='textBalanceAvailable']")
-  public WebElement saldoDisponivel;
+  private WebElement saldoDisponivel;
 
-  @FindBy(xpath = "//*[@id='textTransferValue']")
-  public WebElement valorTransferencia;
+  @FindBy(xpath = "/html/body/div/div/div[3]/div/div[2]/div[1]/div[2]/p[1]") // descrição abertura
+  private WebElement descricaoAbertura;
 
-  @FindBy(xpath = "//*[@id='textDescription']")
-  public WebElement descricaoTransferencia;
+  @FindBy(xpath = "/html/body/div/div/div[3]/div/div[2]/div[1]/div[2]/p[2]") // valor abertura
+  private WebElement valorAbertura;
+
+  @FindBy(xpath = "/html/body/div/div/div[3]/div/div[2]/div[2]/div[2]/p[1]") // descrição transferência
+  private WebElement descricaoTransferencia;
+
+  @FindBy(xpath = "/html/body/div/div/div[3]/div/div[2]/div[2]/div[2]/p[2]") // valor transferência
+  private WebElement valorTransferencia;
+
+  @FindBy(xpath = "/html/body/div/div/div[3]/div/div[2]/div[1]/div[1]/p[2]") // tipo abertura
+  private WebElement tipoAbertura;
+
+  @FindBy(xpath = "/html/body/div/div/div[3]/div/div[2]/div[2]/div[1]/p[2]") // tipo transferência
+  private WebElement tipoTransferencia;
 
   @FindBy(xpath = "//*[@id='btnExit']")
-  public WebElement exitButton;
+  private WebElement exitButton;
 
   @FindBy(xpath = "//*[@id='btnBack']")
-  public WebElement backButton;
+  private WebElement backButton;
 
   public String obterSaldoDisponivel() {
     String valor = pageUtils.obterTexto(saldoDisponivel);
@@ -51,8 +63,43 @@ public class ExtratoPage {
     return StepsUtils.extraiValor(valor);
   }
 
+  public String obterValorAbertura() {
+    String valor = pageUtils.obterTexto(valorAbertura);
+    return StepsUtils.extraiValor(valor);
+  }
+
   public String obterDescricaoTransferencia() {
-    return pageUtils.obterTexto(descricaoTransferencia);
+    String descricao = pageUtils.obterTexto(descricaoTransferencia);
+    return descricao.equals("-") ? "" : descricao;
+  }
+
+  public String obterDescricaoAbertura() {
+    return pageUtils.obterTexto(descricaoAbertura);
+  }
+
+  public String obterTipoTransacao() {
+    return pageUtils.obterTexto(tipoTransferencia);
+  }
+
+  public String obterTipoAbertura() {
+    return pageUtils.obterTexto(tipoAbertura);
+  }
+
+  public String obterValorTransacaoFormatado() {
+    return pageUtils.obterTexto(valorTransferencia);
+  }
+
+  public boolean isValorTransacaoNegativo() {
+    String valor = obterValorTransacaoFormatado();
+    return valor.startsWith("-");
+  }
+
+  public boolean isValorTransacaoPositivo() {
+    return !isValorTransacaoNegativo();
+  }
+
+  public String obterCorValorTransacao() {
+    return valorTransferencia.getCssValue("color");
   }
 
   public void clickExit() {

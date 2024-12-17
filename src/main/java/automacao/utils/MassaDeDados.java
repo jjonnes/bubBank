@@ -28,7 +28,7 @@ public class MassaDeDados {
     return usuarios;
   }
 
-  public static void cadastrar(Usuario usuario, WebDriver driver, int contaComSaldo) {
+  public static void cadastrar(Usuario usuario, WebDriver driver, Boolean contaComSaldo) {
     if (usuario == null || driver == null) {
       throw new IllegalArgumentException("Usuário e driver não podem ser nulos");
     }
@@ -40,7 +40,7 @@ public class MassaDeDados {
       registrarPage.inserirSenha(usuario.getSenha());
       registrarPage.inserirNome(usuario.getNome());
       registrarPage.inserirConfirmarSenha(usuario.getSenha());
-      if (contaComSaldo == 1) {
+      if (contaComSaldo) {
         registrarPage.clickContaComSaldo();
       }
       registrarPage.clickCadastrar();
