@@ -4,24 +4,15 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import automacao.utils.PageUtils;
 
-import java.time.Duration;
-
 public class LoginPage {
 
-  @SuppressWarnings("unused")
-  private WebDriver driver;
-  @SuppressWarnings("unused")
-  private WebDriverWait wait;
   private PageUtils pageUtils;
 
-  public LoginPage(WebDriver driver) {
-    this.driver = driver;
-    this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-    this.pageUtils = new PageUtils(driver);
+  public LoginPage(WebDriver driver, Integer timeOut) {
+    this.pageUtils = new PageUtils(driver, timeOut);
     PageFactory.initElements(driver, this);
   }
 

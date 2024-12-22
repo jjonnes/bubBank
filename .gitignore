@@ -1,0 +1,28 @@
+# Arquivos de configuração sensíveis
+src/main/java/automacao/utils/PropertyReader.java
+src/main/resources/config.properties
+
+# Arquivos compilados
+target/
+*.class
+
+# Arquivos de IDE
+.idea/
+*.iml
+.vscode/
+.settings/
+.project
+.classpath
+
+# Logs
+*.log
+
+# Arquivos temporários
+*.tmp
+*.bak
+*.swp
+*~.nib
+
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db

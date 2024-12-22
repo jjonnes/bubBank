@@ -5,7 +5,7 @@ Funcionalidade: testar tranferencia
 
   
   @CT001_TransferenciaContaInvalida @MassaComSaldo 
-  Esquema do Cenário: Tentativa de transferência para conta inválida
+  Cenário: Tentativa de transferência para conta inválida
     Dado que eu estou na página de transferência
     Quando inserir o número da conta inexistente "<conta>" e o dígito "<conta>"
     E inserir o campo descrição com "<descrição>"
@@ -19,7 +19,7 @@ Funcionalidade: testar tranferencia
 
  
   @CT002_TransferenciaSaldoInsuficiente @MassaComSaldo
-  Esquema do Cenário: Tentativa de transferência com saldo insuficiente
+  Cenário: Tentativa de transferência com saldo insuficiente
     Dado que eu estou na página de transferência
     Quando inserir o número da conta
     E inserir o campo descrição com "<descrição>"
@@ -33,7 +33,7 @@ Funcionalidade: testar tranferencia
 
  
   @CT003_TransferenciaValorInvalido @MassaComSaldo
-  Esquema do Cenário: Tentativa de transferência com valor inválido
+  Cenário: Tentativa de transferência com valor inválido
     Dado que eu estou na página de transferência
     Quando inserir o número da conta
     E inserir o campo descrição com "<descrição>"
@@ -47,7 +47,7 @@ Funcionalidade: testar tranferencia
 
  
   @CT004_ModalDeTransferenciaRealizadaComSucesso @MassaComSaldo
-  Esquema do Cenário: Modal de transferência realizada com sucesso
+  Cenário: Modal de transferência realizada com sucesso
     Dado que eu estou na página de transferência
     Quando inserir o número da conta
     E inserir o campo descrição com "<descrição>"
@@ -61,7 +61,7 @@ Funcionalidade: testar tranferencia
 
  
   @CT005_TransferenciaRealizadaComSucessoComReducaoDeSaldo @MassaComSaldo
-  Esquema do Cenário: Transferência realizada com sucesso com redução de saldo
+  Cenário: Transferência realizada com sucesso com redução de saldo
     Dado que eu estou na página de transferência
     Quando inserir o número da conta
     E inserir o campo descrição com "<descrição>"
@@ -75,7 +75,7 @@ Funcionalidade: testar tranferencia
 
  
   @CT006_RedirecionamentoAposTransferenciaRealizadaComSucesso @MassaComSaldo
-  Esquema do Cenário: Redirecionamento após transferência realizada com sucesso
+  Cenário: Redirecionamento após transferência realizada com sucesso
     Dado que eu estou na página de transferência
     Quando inserir o número da conta
     E inserir o campo descrição com "<descrição>"
@@ -89,7 +89,7 @@ Funcionalidade: testar tranferencia
 
  
   @CT007_CampoDescricaoObrigatorio @MassaComSaldo
-  Esquema do Cenário: Campo descrição é obrigatório
+  Cenário: Campo descrição é obrigatório
     Dado que eu estou na página de transferência
     Quando inserir o número da conta
     E inserir o valor da transferência com "<valor>"
@@ -102,7 +102,7 @@ Funcionalidade: testar tranferencia
 
   
   @CT008_TransferenciaRealizadaComSucessoComCreditoNaConta @MassaComSaldo
-  Esquema do Cenário: Transferência realizada com sucesso com crédito na conta
+  Cenário: Transferência realizada com sucesso com crédito na conta
     Dado que eu estou na página de transferência
     Quando inserir o número da conta
     E inserir o campo descrição com "<descrição>"
@@ -116,7 +116,7 @@ Funcionalidade: testar tranferencia
 
   
   @CT009_ValidacaoCaracteresNumeroConta @MassaComSaldo
-  Esquema do Cenário: Validação de caracteres aceitos no número da conta
+  Cenário: Validação de caracteres aceitos no número da conta
     Dado que eu estou na página de transferência
     Entao validar que o campo número da conta aceita apenas o padrão "<regex>"
 
@@ -125,7 +125,7 @@ Funcionalidade: testar tranferencia
     |^[0-9]+$ |
 
   @CT009_ValidacaoCaracteresNumeroConta @MassaComSaldo
-  Esquema do Cenário: Validação de caracteres aceitos no número da conta
+  Cenário: Validação de caracteres aceitos no número da conta
     Dado que eu estou na página de transferência
     Entao validar que o campo dígito aceita apenas o padrão "<regex>"
 

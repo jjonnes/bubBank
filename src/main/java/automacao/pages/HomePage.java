@@ -15,15 +15,12 @@ import org.openqa.selenium.TimeoutException;
 
 public class HomePage {
 
-  @SuppressWarnings("unused")
-  private WebDriver driver;
   private WebDriverWait wait;
   private PageUtils pageUtils;
 
-  public HomePage(WebDriver driver) {
-    this.driver = driver;
-    this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-    this.pageUtils = new PageUtils(driver);
+  public HomePage(WebDriver driver, Integer timeOut) {
+    this.wait = new WebDriverWait(driver, Duration.ofSeconds(timeOut));
+    this.pageUtils = new PageUtils(driver, timeOut);
     PageFactory.initElements(driver, this);
   }
 

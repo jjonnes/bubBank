@@ -34,7 +34,8 @@ public class MassaDeDados {
     }
 
     try {
-      CadastroPage registrarPage = new CadastroPage(driver);
+      PropertyReader config = PropertyReader.getInstance();
+      CadastroPage registrarPage = new CadastroPage(driver, config.getElementTimeout());
       registrarPage.clickRegistrar();
       registrarPage.inserirEmail(usuario.getEmail());
       registrarPage.inserirSenha(usuario.getSenha());

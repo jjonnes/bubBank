@@ -3,11 +3,11 @@
     "line": 4,
     "elements": [
       {
-        "start_timestamp": "2024-12-17T20:38:47.009Z",
+        "start_timestamp": "2024-12-22T04:47:43.192Z",
         "before": [
           {
             "result": {
-              "duration": 8688107800,
+              "duration": 4552274300,
               "status": "passed"
             },
             "match": {
@@ -15,14 +15,14 @@
             }
           }
         ],
-        "line": 18,
-        "name": "Tentativa de transferência para conta inválida",
+        "line": 66,
+        "name": "Realizar cadastro com valor de saldo",
         "description": "",
-        "id": "testar-tranferencia;tentativa-de-transferência-para-conta-inválida;;2",
+        "id": "testar-cadastro;realizar-cadastro-com-valor-de-saldo;;2",
         "after": [
           {
             "result": {
-              "duration": 467549600,
+              "duration": 373993700,
               "status": "passed"
             },
             "match": {
@@ -31,1211 +31,168 @@
           }
         ],
         "type": "scenario",
-        "keyword": "Esquema do Cenário",
+        "keyword": "Cenário",
         "steps": [
           {
             "result": {
-              "duration": 718134500,
-              "status": "passed"
-            },
-            "line": 9,
-            "name": "que eu estou na página de transferência",
-            "match": {
-              "location": "automacao.steps.TransferenciaSteps.que_eu_estou_na_página_de_transferência()"
-            },
-            "keyword": "Dado "
-          },
-          {
-            "result": {
-              "duration": 378999600,
-              "status": "passed"
-            },
-            "line": 10,
-            "name": "inserir o número da conta inexistente \"123456-0\" e o dígito \"123456-0\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"123456-0\"",
-                  "offset": 38
-                },
-                {
-                  "val": "\"123456-0\"",
-                  "offset": 60
-                }
-              ],
-              "location": "automacao.steps.TransferenciaSteps.inserir_o_número_da_conta_inexistente_e_o_dígito(java.lang.String,java.lang.String)"
-            },
-            "keyword": "Quando "
-          },
-          {
-            "result": {
-              "duration": 162000400,
-              "status": "passed"
-            },
-            "line": 11,
-            "name": "inserir o campo descrição com \"Pagamento\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Pagamento\"",
-                  "offset": 30
-                }
-              ],
-              "location": "automacao.steps.TransferenciaSteps.inserir_o_campo_descrição_com(java.lang.String)"
-            },
-            "keyword": "E "
-          },
-          {
-            "result": {
-              "duration": 151993800,
-              "status": "passed"
-            },
-            "line": 12,
-            "name": "inserir o valor da transferência com \"100\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"100\"",
-                  "offset": 37
-                }
-              ],
-              "location": "automacao.steps.TransferenciaSteps.inserir_o_valor_da_transferência_com(java.lang.String)"
-            },
-            "keyword": "E "
-          },
-          {
-            "result": {
-              "duration": 116997400,
-              "status": "passed"
-            },
-            "line": 13,
-            "name": "clicar no botão Tranferir agora",
-            "match": {
-              "location": "automacao.steps.TransferenciaSteps.clicar_no_botão_tranferir_agora()"
-            },
-            "keyword": "E "
-          },
-          {
-            "result": {
-              "duration": 585743800,
-              "status": "passed"
-            },
-            "line": 14,
-            "name": "eu devo ver a mensagem \"Conta inválida ou inexistente\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Conta inválida ou inexistente\"",
-                  "offset": 23
-                }
-              ],
-              "location": "automacao.steps.TransferenciaSteps.eu_devo_ver_a_mensagem_de_erro(java.lang.String)"
-            },
-            "keyword": "Entao "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@Transferencia"
-          },
-          {
-            "name": "@CT001_TransferenciaContaInvalida"
-          },
-          {
-            "name": "@MassaComSaldo"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2024-12-17T20:38:58.561Z",
-        "before": [
-          {
-            "result": {
-              "duration": 7472097100,
-              "status": "passed"
-            },
-            "match": {
-              "location": "automacao.steps.Hooks.setUpI()"
-            }
-          }
-        ],
-        "line": 32,
-        "name": "Tentativa de transferência com saldo insuficiente",
-        "description": "",
-        "id": "testar-tranferencia;tentativa-de-transferência-com-saldo-insuficiente;;2",
-        "after": [
-          {
-            "result": {
-              "duration": 459231200,
-              "status": "passed"
-            },
-            "match": {
-              "location": "automacao.steps.Hooks.tearDown()"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Esquema do Cenário",
-        "steps": [
-          {
-            "result": {
-              "duration": 669416900,
-              "status": "passed"
-            },
-            "line": 23,
-            "name": "que eu estou na página de transferência",
-            "match": {
-              "location": "automacao.steps.TransferenciaSteps.que_eu_estou_na_página_de_transferência()"
-            },
-            "keyword": "Dado "
-          },
-          {
-            "result": {
-              "duration": 378851900,
-              "status": "passed"
-            },
-            "line": 24,
-            "name": "inserir o número da conta",
-            "match": {
-              "location": "automacao.steps.TransferenciaSteps.inserir_o_número_da_conta()"
-            },
-            "keyword": "Quando "
-          },
-          {
-            "result": {
-              "duration": 149881400,
-              "status": "passed"
-            },
-            "line": 25,
-            "name": "inserir o campo descrição com \"Pagamento\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Pagamento\"",
-                  "offset": 30
-                }
-              ],
-              "location": "automacao.steps.TransferenciaSteps.inserir_o_campo_descrição_com(java.lang.String)"
-            },
-            "keyword": "E "
-          },
-          {
-            "result": {
-              "duration": 127994900,
-              "status": "passed"
-            },
-            "line": 26,
-            "name": "inserir o valor da transferência com \"10000\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"10000\"",
-                  "offset": 37
-                }
-              ],
-              "location": "automacao.steps.TransferenciaSteps.inserir_o_valor_da_transferência_com(java.lang.String)"
-            },
-            "keyword": "E "
-          },
-          {
-            "result": {
-              "duration": 121002100,
-              "status": "passed"
-            },
-            "line": 27,
-            "name": "clicar no botão Tranferir agora",
-            "match": {
-              "location": "automacao.steps.TransferenciaSteps.clicar_no_botão_tranferir_agora()"
-            },
-            "keyword": "E "
-          },
-          {
-            "result": {
-              "duration": 585026400,
-              "status": "passed"
-            },
-            "line": 28,
-            "name": "eu devo ver a mensagem \"Você não tem saldo suficiente para essa transação\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Você não tem saldo suficiente para essa transação\"",
-                  "offset": 23
-                }
-              ],
-              "location": "automacao.steps.TransferenciaSteps.eu_devo_ver_a_mensagem_de_erro(java.lang.String)"
-            },
-            "keyword": "Entao "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@Transferencia"
-          },
-          {
-            "name": "@CT002_TransferenciaSaldoInsuficiente"
-          },
-          {
-            "name": "@MassaComSaldo"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2024-12-17T20:39:08.570Z",
-        "before": [
-          {
-            "result": {
-              "duration": 6360025700,
-              "status": "passed"
-            },
-            "match": {
-              "location": "automacao.steps.Hooks.setUpI()"
-            }
-          }
-        ],
-        "line": 46,
-        "name": "Tentativa de transferência com valor inválido",
-        "description": "",
-        "id": "testar-tranferencia;tentativa-de-transferência-com-valor-inválido;;2",
-        "after": [
-          {
-            "result": {
-              "duration": 332971300,
-              "status": "passed"
-            },
-            "match": {
-              "location": "automacao.steps.Hooks.tearDown()"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Esquema do Cenário",
-        "steps": [
-          {
-            "result": {
-              "duration": 773002800,
-              "status": "passed"
-            },
-            "line": 37,
-            "name": "que eu estou na página de transferência",
-            "match": {
-              "location": "automacao.steps.TransferenciaSteps.que_eu_estou_na_página_de_transferência()"
-            },
-            "keyword": "Dado "
-          },
-          {
-            "result": {
-              "duration": 395000300,
-              "status": "passed"
-            },
-            "line": 38,
-            "name": "inserir o número da conta",
-            "match": {
-              "location": "automacao.steps.TransferenciaSteps.inserir_o_número_da_conta()"
-            },
-            "keyword": "Quando "
-          },
-          {
-            "result": {
-              "duration": 229041900,
-              "status": "passed"
-            },
-            "line": 39,
-            "name": "inserir o campo descrição com \"Pagamento\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Pagamento\"",
-                  "offset": 30
-                }
-              ],
-              "location": "automacao.steps.TransferenciaSteps.inserir_o_campo_descrição_com(java.lang.String)"
-            },
-            "keyword": "E "
-          },
-          {
-            "result": {
-              "duration": 191001000,
-              "status": "passed"
-            },
-            "line": 40,
-            "name": "inserir o valor da transferência com \"-50\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"-50\"",
-                  "offset": 37
-                }
-              ],
-              "location": "automacao.steps.TransferenciaSteps.inserir_o_valor_da_transferência_com(java.lang.String)"
-            },
-            "keyword": "E "
-          },
-          {
-            "result": {
-              "duration": 164998800,
-              "status": "passed"
-            },
-            "line": 41,
-            "name": "clicar no botão Tranferir agora",
-            "match": {
-              "location": "automacao.steps.TransferenciaSteps.clicar_no_botão_tranferir_agora()"
-            },
-            "keyword": "E "
-          },
-          {
-            "result": {
-              "duration": 575100300,
-              "status": "passed"
-            },
-            "line": 42,
-            "name": "eu devo ver a mensagem \"Valor da transferência não pode ser 0 ou negativo\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Valor da transferência não pode ser 0 ou negativo\"",
-                  "offset": 23
-                }
-              ],
-              "location": "automacao.steps.TransferenciaSteps.eu_devo_ver_a_mensagem_de_erro(java.lang.String)"
-            },
-            "keyword": "Entao "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@Transferencia"
-          },
-          {
-            "name": "@CT003_TransferenciaValorInvalido"
-          },
-          {
-            "name": "@MassaComSaldo"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2024-12-17T20:39:17.615Z",
-        "before": [
-          {
-            "result": {
-              "duration": 6383092800,
-              "status": "passed"
-            },
-            "match": {
-              "location": "automacao.steps.Hooks.setUpI()"
-            }
-          }
-        ],
-        "line": 60,
-        "name": "Modal de transferência realizada com sucesso",
-        "description": "",
-        "id": "testar-tranferencia;modal-de-transferência-realizada-com-sucesso;;2",
-        "after": [
-          {
-            "result": {
-              "duration": 444819600,
-              "status": "passed"
-            },
-            "match": {
-              "location": "automacao.steps.Hooks.tearDown()"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Esquema do Cenário",
-        "steps": [
-          {
-            "result": {
-              "duration": 668209200,
-              "status": "passed"
-            },
-            "line": 51,
-            "name": "que eu estou na página de transferência",
-            "match": {
-              "location": "automacao.steps.TransferenciaSteps.que_eu_estou_na_página_de_transferência()"
-            },
-            "keyword": "Dado "
-          },
-          {
-            "result": {
-              "duration": 333001700,
-              "status": "passed"
-            },
-            "line": 52,
-            "name": "inserir o número da conta",
-            "match": {
-              "location": "automacao.steps.TransferenciaSteps.inserir_o_número_da_conta()"
-            },
-            "keyword": "Quando "
-          },
-          {
-            "result": {
-              "duration": 158000200,
-              "status": "passed"
-            },
-            "line": 53,
-            "name": "inserir o campo descrição com \"Pagamento\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Pagamento\"",
-                  "offset": 30
-                }
-              ],
-              "location": "automacao.steps.TransferenciaSteps.inserir_o_campo_descrição_com(java.lang.String)"
-            },
-            "keyword": "E "
-          },
-          {
-            "result": {
-              "duration": 135000400,
-              "status": "passed"
-            },
-            "line": 54,
-            "name": "inserir o valor da transferência com \"100\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"100\"",
-                  "offset": 37
-                }
-              ],
-              "location": "automacao.steps.TransferenciaSteps.inserir_o_valor_da_transferência_com(java.lang.String)"
-            },
-            "keyword": "E "
-          },
-          {
-            "result": {
-              "duration": 138997400,
+              "duration": 197003900,
               "status": "passed"
             },
             "line": 55,
-            "name": "clicar no botão Tranferir agora",
+            "name": "que eu acesse a tela de cadastro",
             "match": {
-              "location": "automacao.steps.TransferenciaSteps.clicar_no_botão_tranferir_agora()"
+              "location": "automacao.steps.CadastroSteps.queEuAcesseATelaDeCadastro()"
             },
-            "keyword": "E "
+            "keyword": "Dado "
           },
           {
             "result": {
-              "error_message": "org.junit.ComparisonFailure: expected:\u003cTransfer[ê]ncia realizada com s...\u003e but was:\u003cTransfer[e]ncia realizada com s...\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:117)\r\n\tat org.junit.Assert.assertEquals(Assert.java:146)\r\n\tat automacao.steps.TransferenciaSteps.eu_devo_ver_a_mensagem_de_erro(TransferenciaSteps.java:69)\r\n\tat ✽.eu devo ver a mensagem \"Transferência realizada com sucesso\"(file:///C:/Users/joaov/eclipse-workspace/bugBank/src/test/resources/features/transferencia.feature:56)\r\n",
-              "duration": 577044200,
-              "status": "failed"
+              "duration": 233002400,
+              "status": "passed"
             },
             "line": 56,
-            "name": "eu devo ver a mensagem \"Transferência realizada com sucesso\"",
+            "name": "inserir email no cadastro \"exemplo@email.com\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"Transferência realizada com sucesso\"",
-                  "offset": 23
+                  "val": "\"exemplo@email.com\"",
+                  "offset": 26
                 }
               ],
-              "location": "automacao.steps.TransferenciaSteps.eu_devo_ver_a_mensagem_de_erro(java.lang.String)"
-            },
-            "keyword": "Entao "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@Transferencia"
-          },
-          {
-            "name": "@CT004_ModalDeTransferenciaRealizadaComSucesso"
-          },
-          {
-            "name": "@MassaComSaldo"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2024-12-17T20:39:26.521Z",
-        "before": [
-          {
-            "result": {
-              "duration": 6130299000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "automacao.steps.Hooks.setUpI()"
-            }
-          }
-        ],
-        "line": 74,
-        "name": "Transferência realizada com sucesso com redução de saldo",
-        "description": "",
-        "id": "testar-tranferencia;transferência-realizada-com-sucesso-com-redução-de-saldo;;2",
-        "after": [
-          {
-            "result": {
-              "duration": 464127500,
-              "status": "passed"
-            },
-            "match": {
-              "location": "automacao.steps.Hooks.tearDown()"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Esquema do Cenário",
-        "steps": [
-          {
-            "result": {
-              "duration": 765163000,
-              "status": "passed"
-            },
-            "line": 65,
-            "name": "que eu estou na página de transferência",
-            "match": {
-              "location": "automacao.steps.TransferenciaSteps.que_eu_estou_na_página_de_transferência()"
-            },
-            "keyword": "Dado "
-          },
-          {
-            "result": {
-              "duration": 379266100,
-              "status": "passed"
-            },
-            "line": 66,
-            "name": "inserir o número da conta",
-            "match": {
-              "location": "automacao.steps.TransferenciaSteps.inserir_o_número_da_conta()"
+              "location": "automacao.steps.CadastroSteps.inserirEmailCadastro(java.lang.String)"
             },
             "keyword": "Quando "
           },
           {
             "result": {
-              "duration": 143000700,
+              "duration": 198000900,
               "status": "passed"
             },
-            "line": 67,
-            "name": "inserir o campo descrição com \"Pagamento\"",
+            "line": 57,
+            "name": "inserir senha no cadastro \"123\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"Pagamento\"",
-                  "offset": 30
+                  "val": "\"123\"",
+                  "offset": 26
                 }
               ],
-              "location": "automacao.steps.TransferenciaSteps.inserir_o_campo_descrição_com(java.lang.String)"
+              "location": "automacao.steps.CadastroSteps.inserirSenhaCadastro(java.lang.String)"
             },
             "keyword": "E "
           },
           {
             "result": {
-              "duration": 145000000,
+              "duration": 186996200,
               "status": "passed"
             },
-            "line": 68,
-            "name": "inserir o valor da transferência com \"100\"",
+            "line": 58,
+            "name": "inserir nome no cadastro \"nome\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"100\"",
-                  "offset": 37
+                  "val": "\"nome\"",
+                  "offset": 25
                 }
               ],
-              "location": "automacao.steps.TransferenciaSteps.inserir_o_valor_da_transferência_com(java.lang.String)"
+              "location": "automacao.steps.CadastroSteps.inserirNomeCadastro(java.lang.String)"
             },
             "keyword": "E "
           },
           {
             "result": {
-              "duration": 122998700,
+              "duration": 185000700,
               "status": "passed"
             },
-            "line": 69,
-            "name": "clicar no botão Tranferir agora",
-            "match": {
-              "location": "automacao.steps.TransferenciaSteps.clicar_no_botão_tranferir_agora()"
-            },
-            "keyword": "E "
-          },
-          {
-            "result": {
-              "duration": 844720600,
-              "status": "passed"
-            },
-            "line": 70,
-            "name": "eu devo ter dedução no saldo de \"100\"",
+            "line": 59,
+            "name": "inserir confirmação da senha \"123\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"100\"",
-                  "offset": 32
-                }
-              ],
-              "location": "automacao.steps.TransferenciaSteps.eu_devo_ter_dedução_no_saldo_de(java.lang.String)"
-            },
-            "keyword": "Entao "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@Transferencia"
-          },
-          {
-            "name": "@CT005_TransferenciaRealizadaComSucessoComReducaoDeSaldo"
-          },
-          {
-            "name": "@MassaComSaldo"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2024-12-17T20:39:35.553Z",
-        "before": [
-          {
-            "result": {
-              "duration": 6255272300,
-              "status": "passed"
-            },
-            "match": {
-              "location": "automacao.steps.Hooks.setUpI()"
-            }
-          }
-        ],
-        "line": 88,
-        "name": "Redirecionamento após transferência realizada com sucesso",
-        "description": "",
-        "id": "testar-tranferencia;redirecionamento-após-transferência-realizada-com-sucesso;;2",
-        "after": [
-          {
-            "result": {
-              "duration": 323002000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "automacao.steps.Hooks.tearDown()"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Esquema do Cenário",
-        "steps": [
-          {
-            "result": {
-              "duration": 666776500,
-              "status": "passed"
-            },
-            "line": 79,
-            "name": "que eu estou na página de transferência",
-            "match": {
-              "location": "automacao.steps.TransferenciaSteps.que_eu_estou_na_página_de_transferência()"
-            },
-            "keyword": "Dado "
-          },
-          {
-            "result": {
-              "duration": 359214800,
-              "status": "passed"
-            },
-            "line": 80,
-            "name": "inserir o número da conta",
-            "match": {
-              "location": "automacao.steps.TransferenciaSteps.inserir_o_número_da_conta()"
-            },
-            "keyword": "Quando "
-          },
-          {
-            "result": {
-              "duration": 157998800,
-              "status": "passed"
-            },
-            "line": 81,
-            "name": "inserir o campo descrição com \"Pagamento\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Pagamento\"",
-                  "offset": 30
-                }
-              ],
-              "location": "automacao.steps.TransferenciaSteps.inserir_o_campo_descrição_com(java.lang.String)"
-            },
-            "keyword": "E "
-          },
-          {
-            "result": {
-              "duration": 126000400,
-              "status": "passed"
-            },
-            "line": 82,
-            "name": "inserir o valor da transferência com \"100\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"100\"",
-                  "offset": 37
-                }
-              ],
-              "location": "automacao.steps.TransferenciaSteps.inserir_o_valor_da_transferência_com(java.lang.String)"
-            },
-            "keyword": "E "
-          },
-          {
-            "result": {
-              "duration": 150999000,
-              "status": "passed"
-            },
-            "line": 83,
-            "name": "clicar no botão Tranferir agora",
-            "match": {
-              "location": "automacao.steps.TransferenciaSteps.clicar_no_botão_tranferir_agora()"
-            },
-            "keyword": "E "
-          },
-          {
-            "result": {
-              "error_message": "java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:87)\r\n\tat org.junit.Assert.assertTrue(Assert.java:42)\r\n\tat org.junit.Assert.assertTrue(Assert.java:53)\r\n\tat automacao.steps.TransferenciaSteps.eu_devo_ser_redirecionado_para_a_página_de_extrato(TransferenciaSteps.java:86)\r\n\tat ✽.eu devo ser redirecionado para a página de extrato \"/bank-statement\"(file:///C:/Users/joaov/eclipse-workspace/bugBank/src/test/resources/features/transferencia.feature:84)\r\n",
-              "duration": 10953221800,
-              "status": "failed"
-            },
-            "line": 84,
-            "name": "eu devo ser redirecionado para a página de extrato \"/bank-statement\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"/bank-statement\"",
-                  "offset": 51
-                }
-              ],
-              "location": "automacao.steps.TransferenciaSteps.eu_devo_ser_redirecionado_para_a_página_de_extrato(java.lang.String)"
-            },
-            "keyword": "Entao "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@Transferencia"
-          },
-          {
-            "name": "@CT006_RedirecionamentoAposTransferenciaRealizadaComSucesso"
-          },
-          {
-            "name": "@MassaComSaldo"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2024-12-17T20:39:54.573Z",
-        "before": [
-          {
-            "result": {
-              "duration": 5828900600,
-              "status": "passed"
-            },
-            "match": {
-              "location": "automacao.steps.Hooks.setUpI()"
-            }
-          }
-        ],
-        "line": 101,
-        "name": "Campo descrição é obrigatório",
-        "description": "",
-        "id": "testar-tranferencia;campo-descrição-é-obrigatório;;2",
-        "after": [
-          {
-            "result": {
-              "duration": 287509500,
-              "status": "passed"
-            },
-            "match": {
-              "location": "automacao.steps.Hooks.tearDown()"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Esquema do Cenário",
-        "steps": [
-          {
-            "result": {
-              "duration": 807353700,
-              "status": "passed"
-            },
-            "line": 93,
-            "name": "que eu estou na página de transferência",
-            "match": {
-              "location": "automacao.steps.TransferenciaSteps.que_eu_estou_na_página_de_transferência()"
-            },
-            "keyword": "Dado "
-          },
-          {
-            "result": {
-              "duration": 309999900,
-              "status": "passed"
-            },
-            "line": 94,
-            "name": "inserir o número da conta",
-            "match": {
-              "location": "automacao.steps.TransferenciaSteps.inserir_o_número_da_conta()"
-            },
-            "keyword": "Quando "
-          },
-          {
-            "result": {
-              "duration": 133000400,
-              "status": "passed"
-            },
-            "line": 95,
-            "name": "inserir o valor da transferência com \"100\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"100\"",
-                  "offset": 37
-                }
-              ],
-              "location": "automacao.steps.TransferenciaSteps.inserir_o_valor_da_transferência_com(java.lang.String)"
-            },
-            "keyword": "E "
-          },
-          {
-            "result": {
-              "duration": 145996700,
-              "status": "passed"
-            },
-            "line": 96,
-            "name": "clicar no botão Tranferir agora",
-            "match": {
-              "location": "automacao.steps.TransferenciaSteps.clicar_no_botão_tranferir_agora()"
-            },
-            "keyword": "E "
-          },
-          {
-            "result": {
-              "error_message": "org.junit.ComparisonFailure: expected:\u003c[Campo descrição é obrigatóri]o\u003e but was:\u003c[Transferencia realizada com sucess]o\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:117)\r\n\tat org.junit.Assert.assertEquals(Assert.java:146)\r\n\tat automacao.steps.TransferenciaSteps.eu_devo_ver_a_mensagem_de_erro(TransferenciaSteps.java:69)\r\n\tat ✽.eu devo ver a mensagem \"Campo descrição é obrigatório\"(file:///C:/Users/joaov/eclipse-workspace/bugBank/src/test/resources/features/transferencia.feature:97)\r\n",
-              "duration": 572515800,
-              "status": "failed"
-            },
-            "line": 97,
-            "name": "eu devo ver a mensagem \"Campo descrição é obrigatório\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Campo descrição é obrigatório\"",
-                  "offset": 23
-                }
-              ],
-              "location": "automacao.steps.TransferenciaSteps.eu_devo_ver_a_mensagem_de_erro(java.lang.String)"
-            },
-            "keyword": "Entao "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@Transferencia"
-          },
-          {
-            "name": "@CT007_CampoDescricaoObrigatorio"
-          },
-          {
-            "name": "@MassaComSaldo"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2024-12-17T20:40:02.692Z",
-        "before": [
-          {
-            "result": {
-              "duration": 6538090200,
-              "status": "passed"
-            },
-            "match": {
-              "location": "automacao.steps.Hooks.setUpI()"
-            }
-          }
-        ],
-        "line": 115,
-        "name": "Transferência realizada com sucesso com crédito na conta",
-        "description": "",
-        "id": "testar-tranferencia;transferência-realizada-com-sucesso-com-crédito-na-conta;;2",
-        "after": [
-          {
-            "result": {
-              "duration": 385979300,
-              "status": "passed"
-            },
-            "match": {
-              "location": "automacao.steps.Hooks.tearDown()"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Esquema do Cenário",
-        "steps": [
-          {
-            "result": {
-              "duration": 759207900,
-              "status": "passed"
-            },
-            "line": 106,
-            "name": "que eu estou na página de transferência",
-            "match": {
-              "location": "automacao.steps.TransferenciaSteps.que_eu_estou_na_página_de_transferência()"
-            },
-            "keyword": "Dado "
-          },
-          {
-            "result": {
-              "duration": 318901800,
-              "status": "passed"
-            },
-            "line": 107,
-            "name": "inserir o número da conta",
-            "match": {
-              "location": "automacao.steps.TransferenciaSteps.inserir_o_número_da_conta()"
-            },
-            "keyword": "Quando "
-          },
-          {
-            "result": {
-              "duration": 158998300,
-              "status": "passed"
-            },
-            "line": 108,
-            "name": "inserir o campo descrição com \"Pagamento\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Pagamento\"",
-                  "offset": 30
-                }
-              ],
-              "location": "automacao.steps.TransferenciaSteps.inserir_o_campo_descrição_com(java.lang.String)"
-            },
-            "keyword": "E "
-          },
-          {
-            "result": {
-              "duration": 125998900,
-              "status": "passed"
-            },
-            "line": 109,
-            "name": "inserir o valor da transferência com \"100\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"100\"",
-                  "offset": 37
-                }
-              ],
-              "location": "automacao.steps.TransferenciaSteps.inserir_o_valor_da_transferência_com(java.lang.String)"
-            },
-            "keyword": "E "
-          },
-          {
-            "result": {
-              "duration": 126000200,
-              "status": "passed"
-            },
-            "line": 110,
-            "name": "clicar no botão Tranferir agora",
-            "match": {
-              "location": "automacao.steps.TransferenciaSteps.clicar_no_botão_tranferir_agora()"
-            },
-            "keyword": "E "
-          },
-          {
-            "result": {
-              "duration": 1521289400,
-              "status": "passed"
-            },
-            "line": 111,
-            "name": "a conta destino deve receber \"100\" com a descrição \"Pagamento\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"100\"",
+                  "val": "\"123\"",
                   "offset": 29
-                },
-                {
-                  "val": "\"Pagamento\"",
-                  "offset": 51
                 }
               ],
-              "location": "automacao.steps.TransferenciaSteps.a_conta_destino_deve_receber_com_a_descrição(java.lang.String,java.lang.String)"
+              "location": "automacao.steps.CadastroSteps.inserirConfirmacaoSenha(java.lang.String)"
             },
-            "keyword": "Entao "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@Transferencia"
-          },
-          {
-            "name": "@CT008_TransferenciaRealizadaComSucessoComCreditoNaConta"
-          },
-          {
-            "name": "@MassaComSaldo"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2024-12-17T20:40:12.643Z",
-        "before": [
-          {
-            "result": {
-              "duration": 6158485600,
-              "status": "passed"
-            },
-            "match": {
-              "location": "automacao.steps.Hooks.setUpI()"
-            }
-          }
-        ],
-        "line": 125,
-        "name": "Validação de caracteres aceitos no número da conta",
-        "description": "",
-        "id": "testar-tranferencia;validação-de-caracteres-aceitos-no-número-da-conta;;2",
-        "after": [
-          {
-            "result": {
-              "duration": 370998800,
-              "status": "passed"
-            },
-            "match": {
-              "location": "automacao.steps.Hooks.tearDown()"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Esquema do Cenário",
-        "steps": [
-          {
-            "result": {
-              "duration": 725803300,
-              "status": "passed"
-            },
-            "line": 120,
-            "name": "que eu estou na página de transferência",
-            "match": {
-              "location": "automacao.steps.TransferenciaSteps.que_eu_estou_na_página_de_transferência()"
-            },
-            "keyword": "Dado "
+            "keyword": "E "
           },
           {
             "result": {
-              "error_message": "java.lang.AssertionError: O campo número da conta está aceitando caracteres fora do padrão especificado: ^[0-9]+$. O campo deve aceitar apenas caracteres que correspondam ao regex.\r\n\tat org.junit.Assert.fail(Assert.java:89)\r\n\tat org.junit.Assert.assertTrue(Assert.java:42)\r\n\tat automacao.steps.TransferenciaSteps.validar_que_o_campo_numero_da_conta_aceita_apenas_o_padrao(TransferenciaSteps.java:133)\r\n\tat ✽.validar que o campo número da conta aceita apenas o padrão \"^[0-9]+$\"(file:///C:/Users/joaov/eclipse-workspace/bugBank/src/test/resources/features/transferencia.feature:121)\r\n",
-              "duration": 1472511600,
-              "status": "failed"
+              "duration": 150783600,
+              "status": "passed"
             },
-            "line": 121,
-            "name": "validar que o campo número da conta aceita apenas o padrão \"^[0-9]+$\"",
+            "line": 60,
+            "name": "marcar a opção conta com saldo",
+            "match": {
+              "location": "automacao.steps.CadastroSteps.marcarOpcaoContaComSaldo()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 139999900,
+              "status": "passed"
+            },
+            "line": 61,
+            "name": "clicar em cadastrar",
+            "match": {
+              "location": "automacao.steps.CadastroSteps.clicarEmCadastrar()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 626149200,
+              "status": "passed"
+            },
+            "line": 62,
+            "name": "a mensagem de alerta de cadastro deve ser apresentada \"foi criada com sucesso\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"^[0-9]+$\"",
-                  "offset": 59
+                  "val": "\"foi criada com sucesso\"",
+                  "offset": 54
                 }
               ],
-              "location": "automacao.steps.TransferenciaSteps.validar_que_o_campo_numero_da_conta_aceita_apenas_o_padrao(java.lang.String)"
+              "location": "automacao.steps.CadastroSteps.verificarMensagemAlertaCadastro(java.lang.String)"
             },
             "keyword": "Entao "
           }
         ],
         "tags": [
           {
-            "name": "@Transferencia"
+            "name": "@Cadastro"
           },
           {
-            "name": "@CT009_ValidacaoCaracteresNumeroConta"
+            "name": "@SemMassa"
           },
           {
-            "name": "@MassaComSaldo"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2024-12-17T20:40:21.392Z",
-        "before": [
-          {
-            "result": {
-              "duration": 6043135200,
-              "status": "passed"
-            },
-            "match": {
-              "location": "automacao.steps.Hooks.setUpI()"
-            }
-          }
-        ],
-        "line": 134,
-        "name": "Validação de caracteres aceitos no número da conta",
-        "description": "",
-        "id": "testar-tranferencia;validação-de-caracteres-aceitos-no-número-da-conta;;2",
-        "after": [
-          {
-            "result": {
-              "duration": 304001700,
-              "status": "passed"
-            },
-            "match": {
-              "location": "automacao.steps.Hooks.tearDown()"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Esquema do Cenário",
-        "steps": [
-          {
-            "result": {
-              "duration": 690508400,
-              "status": "passed"
-            },
-            "line": 129,
-            "name": "que eu estou na página de transferência",
-            "match": {
-              "location": "automacao.steps.TransferenciaSteps.que_eu_estou_na_página_de_transferência()"
-            },
-            "keyword": "Dado "
-          },
-          {
-            "result": {
-              "error_message": "java.lang.AssertionError: O campo dígito da conta está aceitando caracteres fora do padrão especificado: ^[0-9]+$. O campo deve aceitar apenas caracteres que correspondam ao regex.\r\n\tat org.junit.Assert.fail(Assert.java:89)\r\n\tat org.junit.Assert.assertTrue(Assert.java:42)\r\n\tat automacao.steps.TransferenciaSteps.validar_que_o_campo_digito_aceita_apenas_o_padrao(TransferenciaSteps.java:142)\r\n\tat ✽.validar que o campo dígito aceita apenas o padrão \"^[0-9]+$\"(file:///C:/Users/joaov/eclipse-workspace/bugBank/src/test/resources/features/transferencia.feature:130)\r\n",
-              "duration": 1558545000,
-              "status": "failed"
-            },
-            "line": 130,
-            "name": "validar que o campo dígito aceita apenas o padrão \"^[0-9]+$\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"^[0-9]+$\"",
-                  "offset": 50
-                }
-              ],
-              "location": "automacao.steps.TransferenciaSteps.validar_que_o_campo_digito_aceita_apenas_o_padrao(java.lang.String)"
-            },
-            "keyword": "Entao "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@Transferencia"
-          },
-          {
-            "name": "@CT009_ValidacaoCaracteresNumeroConta"
-          },
-          {
-            "name": "@MassaComSaldo"
+            "name": "@CT005_EfetuarCadastroComSaldo"
           }
         ]
       }
     ],
-    "name": "testar tranferencia",
+    "name": "Testar cadastro",
     "description": "",
-    "id": "testar-tranferencia",
+    "id": "testar-cadastro",
     "keyword": "Funcionalidade",
-    "uri": "file:src/test/resources/features/transferencia.feature",
+    "uri": "file:src/test/resources/features/cadastro.feature",
     "tags": [
       {
-        "name": "@Transferencia",
+        "name": "@Cadastro",
         "type": "Tag",
         "location": {
           "line": 3,
           "column": 1
+        }
+      },
+      {
+        "name": "@SemMassa",
+        "type": "Tag",
+        "location": {
+          "line": 3,
+          "column": 11
         }
       }
     ]

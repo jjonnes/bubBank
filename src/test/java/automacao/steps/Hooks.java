@@ -3,6 +3,7 @@ package automacao.steps;
 import automacao.pages.*;
 import automacao.utils.DriverFactory;
 import automacao.utils.MassaDeDados;
+import automacao.utils.PropertyReader;
 import automacao.utils.Usuario;
 import io.cucumber.java.Before;
 import io.cucumber.java.After;
@@ -20,14 +21,19 @@ public class Hooks {
   protected static List<Usuario> massaDeDados;
   protected static ExtratoPage extratoPage;
 
-  @Before("@MassaComSaldo")
+  @Before(value = "@SemMassa")
   public void setUpI() {
-    setUp(2, true);
+    setUp(false, 0, true);
+  }
+
+  @Before(value = "@MassaComSaldo")
+  public void setUpII() {
+    setUp(true, 2, true);
   }
 
   @Before(value = "@MassaSemSaldo")
-  public void setUpII() {
-    setUp(1, false);
+  public void setUpIII() {
+    setUp(true, 1, false);
   }
 
   @After
@@ -36,22 +42,24 @@ public class Hooks {
     System.out.println("Cenário realizado e driver fechado");
   }
 
-  private void setUp(int numeroUsuarios, boolean contaComSaldo) {
+  private void setUp(boolean preCadastro, Integer numeroUsuarios, boolean contaComSaldo) {
     driver = DriverFactory.getDriver();
+    PropertyReader config = PropertyReader.getInstance();
+    loginPage = new LoginPage(driver, config.getPageTimeout());
+    cadastroPage = new CadastroPage(driver, config.getPageTimeout());
+    homePage = new HomePage(driver, config.getPageTimeout());
+    transferenciaPage = new TransferenciaPage(driver, config.getPageTimeout());
+    extratoPage = new ExtratoPage(driver, config.getPageTimeout());
 
-    loginPage = new LoginPage(driver);
-    cadastroPage = new CadastroPage(driver);
-    homePage = new HomePage(driver);
-    transferenciaPage = new TransferenciaPage(driver);
-    extratoPage = new ExtratoPage(driver);
-
-    driver.get("https://bugbank.netlify.app/");
+    driver.get(config.getBaseUrl());
 
     System.out.println("Configuração inicial realizada");
 
-    massaDeDados = MassaDeDados.gerarUsuarios(numeroUsuarios);
-    for (Usuario usuario : massaDeDados) {
-      MassaDeDados.cadastrar(usuario, driver, contaComSaldo);
+    if (preCadastro) {
+      massaDeDados = MassaDeDados.gerarUsuarios(numeroUsuarios);
+      for (Usuario usuario : massaDeDados) {
+        MassaDeDados.cadastrar(usuario, driver, contaComSaldo);
+      }
     }
   }
 

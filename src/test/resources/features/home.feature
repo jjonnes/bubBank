@@ -3,9 +3,8 @@
 @Home
 Funcionalidade: testa página home
 
-  @MassaComSaldo
-  @CT001_VerificarNomeEInicial 
-  Esquema do Cenário: Verificar nome e inicial
+  @CT001_VerificarNomeEInicial @MassaComSaldo
+  Cenário: Verificar nome e inicial
     Dado que eu esteja na tela inicial
     Quando realizar o login sem saldo
     Entao o nome e a inicial deve ser o mesmo de cadastro
@@ -14,9 +13,8 @@ Funcionalidade: testa página home
     |   |   |
     |   |   |
 
-  @MassaSemSaldo
-  @CT002_VerificarONumeroDaConta 
-  Esquema do Cenário: Verificar o número da conta
+  @CT002_VerificarONumeroDaConta @MassaSemSaldo
+  Cenário: Verificar o número da conta
     Dado que eu esteja na tela inicial
     Quando realizar o login sem saldo
     Entao o numero da conta deve ser referente ao login realizado
@@ -25,9 +23,8 @@ Funcionalidade: testa página home
     |   |   |
     |   |   |
 
-  @MassaSemSaldo
-  @CT003_VerificarContaSemSaldo
-  Esquema do Cenário: Verificar conta sem saldo
+  @CT003_VerificarContaSemSaldo @MassaSemSaldo
+  Cenário: Verificar conta sem saldo
     Dado que eu esteja na tela inicial
     Quando realizar o login sem saldo
     Entao o saldo da conta deve ser zero
@@ -36,9 +33,8 @@ Funcionalidade: testa página home
     |   |   |
     |   |   |
 
-  @MassaComSaldo
-  @CT004_VerificarContaComSaldo 
-  Esquema do Cenário: Verificar conta com saldo
+  @CT004_VerificarContaComSaldo @MassaComSaldo
+  Cenário: Verificar conta com saldo
     Dado que eu esteja na tela inicial
     Quando realizar o login com saldo
     Entao a conta deve possuir saldo
@@ -47,9 +43,8 @@ Funcionalidade: testa página home
     |   |   |
     |   |   |
 
-  @MassaSemSaldo
-  @CT005_VerificarFuncaoTrasnferencia 
-  Esquema do Cenário: Verificar função de transferência
+  @CT005_VerificarFuncaoTrasnferencia  @MassaSemSaldo
+  Cenário: Verificar função de transferência
     Dado que eu esteja na tela inicial
     Quando realizar o login sem saldo
     E clicar em tranferencia 
@@ -59,9 +54,8 @@ Funcionalidade: testa página home
     |endPoint |
     |/transfer|
 
-  @MassaSemSaldo
-  @CT006_VerificarFuncaoExtrato 
-  Esquema do Cenário: Verificar função de extrato
+  @CT006_VerificarFuncaoExtrato @MassaSemSaldo
+  Cenário: Verificar função de extrato
     Dado que eu esteja na tela inicial
     Quando realizar o login sem saldo
     E clicar em extrato
@@ -71,9 +65,8 @@ Funcionalidade: testa página home
     |endPoint       |
     |/bank-statement|
 
-  @MassaSemSaldo
-  @CT007_VerificarBotaoSair 
-  Esquema do Cenário: Verificar botão sair
+  @CT007_VerificarBotaoSair @MassaSemSaldo
+  Cenário: Verificar botão sair
     Dado que eu esteja na tela inicial
     E realizar o login sem saldo
     Quando clicar em sair

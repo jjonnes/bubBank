@@ -15,7 +15,7 @@ Funcionalidade: Testar extrato
   @CT002_ValidarTransacaoAberturaConta @MassaSemSaldo
   Cenário: Validar transação de abertura de conta
     Dado que eu estou na página de extrato
-    Então devo visualizar a transação com a descricao "<descricao>"nnnnnnnnnnnnn
+    Então devo visualizar a transação com a descricao "<descricao>"
 
 		Exemplos:
 		| descricao |

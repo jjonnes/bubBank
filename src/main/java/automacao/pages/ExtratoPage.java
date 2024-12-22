@@ -4,25 +4,16 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import automacao.utils.PageUtils;
 import automacao.utils.StepsUtils;
 
-import java.time.Duration;
-
 public class ExtratoPage {
 
-  @SuppressWarnings("unused")
-  private WebDriver driver;
-  @SuppressWarnings("unused")
-  private WebDriverWait wait;
   private PageUtils pageUtils;
 
-  public ExtratoPage(WebDriver driver) {
-    this.driver = driver;
-    this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-    this.pageUtils = new PageUtils(driver);
+  public ExtratoPage(WebDriver driver, Integer timeOut) {
+    this.pageUtils = new PageUtils(driver, timeOut);
     PageFactory.initElements(driver, this);
   }
 
@@ -69,8 +60,7 @@ public class ExtratoPage {
   }
 
   public String obterDescricaoTransferencia() {
-    String descricao = pageUtils.obterTexto(descricaoTransferencia);
-    return descricao.equals("-") ? "" : descricao;
+    return pageUtils.obterTexto(descricaoTransferencia);
   }
 
   public String obterDescricaoAbertura() {
