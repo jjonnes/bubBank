@@ -7,7 +7,6 @@ import automacao.pages.TransferenciaPage;
 import automacao.utils.Usuario;
 import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.Entao;
-import io.cucumber.java.pt.Então;
 import io.cucumber.java.pt.Quando;
 import org.openqa.selenium.TimeoutException;
 import java.util.List;
@@ -50,7 +49,7 @@ public class ExtratoSteps {
     }
   }
 
-  @Então("devo visualizar a transação com a descricao {string}")
+  @Entao("devo visualizar a transação com a descricao {string}")
   public void visualizarTransacaoComDescricao(String tipo) {
     try {
       String texto = extratoPage.obterTipoAbertura();
@@ -114,7 +113,7 @@ public class ExtratoSteps {
     }
   }
 
-  @Então("devo visualizar a transação em verde")
+  @Entao("devo visualizar a transação em verde")
   public void visualizarTransacaoVerde() {
     try {
       String corValor = extratoPage.obterCorValorTransacao();

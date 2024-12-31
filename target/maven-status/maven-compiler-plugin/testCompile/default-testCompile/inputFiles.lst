@@ -2,10 +2,10 @@ C:\Users\joaov\eclipse-workspace\bugBank\src\test\java\automacao\steps\CadastroS
 C:\Users\joaov\eclipse-workspace\bugBank\src\test\java\automacao\steps\TransferenciaSteps.java
 C:\Users\joaov\eclipse-workspace\bugBank\src\test\java\automacao\steps\ExtratoSteps.java
 C:\Users\joaov\eclipse-workspace\bugBank\src\test\java\automacao\steps\HomeSteps.java
-C:\Users\joaov\eclipse-workspace\bugBank\src\test\java\automacao\runners\CadastroRunner.java
 C:\Users\joaov\eclipse-workspace\bugBank\src\test\java\automacao\runners\ExtratoRunner.java
 C:\Users\joaov\eclipse-workspace\bugBank\src\test\java\automacao\runners\TranferenciaRunner.java
 C:\Users\joaov\eclipse-workspace\bugBank\src\test\java\automacao\runners\HomeRunner.java
 C:\Users\joaov\eclipse-workspace\bugBank\src\test\java\automacao\steps\Hooks.java
+C:\Users\joaov\eclipse-workspace\bugBank\src\test\java\automacao\runners\CadastroRunnerTest.java
 C:\Users\joaov\eclipse-workspace\bugBank\src\test\java\automacao\runners\LoginRunner.java
 C:\Users\joaov\eclipse-workspace\bugBank\src\test\java\automacao\steps\LoginSteps.java

@@ -47,8 +47,8 @@ Funcionalidade: Testar cadastro
 		Entao a mensagem de alerta de cadastro deve ser apresentada "<msg1>"
 		
 		Exemplos:
-		|msg1                          |email            |senha|nome|
-		|A conta foi criada com sucesso|exemplo@email.com|123  |nome|
+		|msg1                  |email            |senha|nome|
+		|foi criada com sucesso|exemplo@email.com|123  |nome|
 	
 	@CT005_EfetuarCadastroComSaldo
 	Cenário: Realizar cadastro com valor de saldo
@@ -62,5 +62,5 @@ Funcionalidade: Testar cadastro
 		Entao a mensagem de alerta de cadastro deve ser apresentada "<msg1>"
 
 		Exemplos:
-		|msg1                          |email            |senha|nome|
+		|msg1                  |email            |senha|nome|
 		|foi criada com sucesso|exemplo@email.com|123  |nome|

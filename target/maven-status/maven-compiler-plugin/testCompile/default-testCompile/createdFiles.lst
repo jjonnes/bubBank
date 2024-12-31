@@ -1,0 +1,10 @@
+automacao\runners\ExtratoRunner.class
+automacao\runners\HomeRunner.class
+automacao\steps\CadastroSteps.class
+automacao\steps\TransferenciaSteps.class
+automacao\runners\LoginRunner.class
+automacao\steps\LoginSteps.class
+automacao\runners\TranferenciaRunner.class
+automacao\steps\Hooks.class
+automacao\steps\HomeSteps.class
+automacao\steps\ExtratoSteps.class

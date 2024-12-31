@@ -1,0 +1,11 @@
+automacao\utils\MassaDeDados.class
+automacao\utils\PropertyReader.class
+automacao\utils\Usuario.class
+automacao\pages\CadastroPage.class
+automacao\pages\LoginPage.class
+automacao\pages\ExtratoPage.class
+automacao\pages\HomePage.class
+automacao\utils\DriverFactory.class
+automacao\utils\StepsUtils.class
+automacao\pages\TransferenciaPage.class
+automacao\utils\PageUtils.class
